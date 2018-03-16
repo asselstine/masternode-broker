@@ -7,8 +7,38 @@ import {
 
 import style from './style'
 import Navcol from './navcol'
+import BrokerNavbar from './broker-navbar'
 
 export const Application = () => {
+/* Tabbar code
+
+<div className='columns app__tabbar'>
+  <div className='column'>
+    <div className="tabs">
+      <ul>
+        <li className="is-active"><a>Pictures</a></li>
+        <li><a>Music</a></li>
+        <li><a>Videos</a></li>
+        <li><a>Documents</a></li>
+      </ul>
+    </div>
+  </div>
+  <div className='app__tabbar__search'>
+    <div className="control has-icons-left has-icons-right">
+      <input className="input" type="search" placeholder="Search" />
+      <span className="icon is-small is-left">
+        <FontAwesome name='envelope' />
+      </span>
+      <span className="icon is-small is-right">
+        <FontAwesome name='check' />
+      </span>
+    </div>
+  </div>
+</div>
+*/
+
+
+
   return (
     <section>
       <div className='columns is-gapless'>
@@ -25,6 +55,7 @@ export const Application = () => {
               </div>
             </div>
           </nav>
+          <BrokerNavbar />
         </div>
       </div>
     </section>
