@@ -2,7 +2,7 @@ import React from 'react'
 
 import style from './style'
 
-export default (props) => {
+export default ({className}) => {
 
   var clients = [
     '4321 Canada Inc.',
@@ -25,7 +25,7 @@ export default (props) => {
   ]
 
   return (
-    <div className='navcol'>
+    <div className={['navcol', className].join(' ')}>
       <div className='navcol__header'>
         <div className='navcol__header__circle'>
           <div className='navcol__header__circle__text is-size-7 has-text-grey'>
@@ -34,21 +34,21 @@ export default (props) => {
         </div>
         <h3 className='navcol__header__title text-center is-size-5 has-text-weight-light'>Broker Portal</h3>
       </div>
-      <aside class="menu navcol__menu">
-        <p class="menu-label">
+      <aside className="menu navcol__menu">
+        <p className="menu-label">
           General
         </p>
-        <ul class="menu-list">
-          {clients.map((client) => <li><a className='has-text-weight-bold'>{client}</a></li>)}
+        <ul className="menu-list">
+          {clients.map((client) => <li key={client}><a className='has-text-weight-bold'>{client}</a></li>)}
         </ul>
       </aside>
 
-      <aside class="menu navcol__menu">
-        <p class="menu-label">
+      <aside className="menu navcol__menu">
+        <p className="menu-label">
           Other Groups
         </p>
-        <ul class="menu-list">
-          {groups.map((group) => <li><a className='has-text-weight-bold'>{group}</a></li>)}
+        <ul className="menu-list">
+          {groups.map((group) => <li key={group}><a className='has-text-weight-bold'>{group}</a></li>)}
         </ul>
       </aside>
     </div>

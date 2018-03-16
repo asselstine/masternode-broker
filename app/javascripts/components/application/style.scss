@@ -1,0 +1,20 @@
+$navbar-link-color: #AAAAAA;
+
+.app__navcol {
+  flex: 0 0 310px;
+}
+
+.app__navbar.navbar {
+  background-color: #333;
+  min-height: 2rem;
+}
+
+.app__navbar .navbar-item .navbar-link {
+  color: $navbar-link-color;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.app__navbar .navbar-link::after {
+  border-color: $navbar-link-color;
+}
