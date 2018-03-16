@@ -22,6 +22,10 @@ module.exports = {
        test: /\.css$/,
        use: [ 'style-loader', 'css-loader' ]
       },
+      {
+        test: /\.scss$/,
+        use: ["style-loader", "css-loader", "sass-loader"]
+      },
       { test: /\.json$/, use: 'json-loader' },
       {
         test: /\.(js|jsx)$/,
@@ -31,7 +35,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.css', '.js', '.jsx'],
+    extensions: ['.scss', '.css', '.js', '.jsx'],
   },
   devServer: {
     historyApiFallback: true

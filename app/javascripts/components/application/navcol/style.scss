@@ -1,0 +1,57 @@
+$menu-padding-left: 1.5rem;
+
+.navcol {
+  width: 310px;
+  min-height: 100%;
+  display: inline-block;
+  background-color: #194C75;
+}
+
+.navcol__header {
+  background: linear-gradient(#4B84AF, #194C75);
+  text-align: center;
+  padding: 2rem;
+}
+
+.navcol__header__title {
+  color: white;
+  margin-top: 1.25rem;
+}
+
+.navcol__header__circle {
+  background-color: white;
+  border-radius: 50%;
+  height: 128px;
+  width: 128px;
+  display: inline-block;
+  text-align: center;
+}
+
+.navcol__header__circle__text {
+  padding: 3.5rem 0rem;
+}
+
+.navcol__menu {
+  margin-bottom: 2rem;
+}
+
+.navcol__menu .menu-label {
+  color: #89A5BA;
+  padding-left: $menu-padding-left;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #D1D1D1;
+}
+
+.navcol__menu .menu-label:not(:last-child) {
+  margin-bottom: 0rem;
+}
+
+.navcol__menu .menu-list a {
+  color: #CFDBE3;
+  padding: 0.6em 0.75em 0.6em $menu-padding-left;
+}
+
+.navcol__menu .menu-list a:hover {
+  background-color: #103C5F;
+  color: #FFFFFF;
+}
