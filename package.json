@@ -1,5 +1,5 @@
 {
-  "name": "masternode-broker",
+  "name": "nodeai",
   "version": "0.0.1",
   "description": "Frontend Prototype",
   "scripts": {
@@ -15,6 +15,7 @@
     "babel-eslint": "^6.1.2",
     "babel-loader": "^6.4.1",
     "babel-node-modules": "0.0.1",
+    "babel-plugin-root-import": "^5.1.0",
     "babel-plugin-transform-runtime": "^6.22.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
@@ -23,6 +24,7 @@
     "babel-preset-stage-2": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
     "babel-register": "^6.22.0",
+    "chart.js": "^2.7.2",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.26.1",
     "eslint": "^3.14.0",
@@ -34,6 +36,7 @@
     "html-webpack-plugin": "^2.28.0",
     "json-loader": "^0.5.4",
     "node-sass": "^4.7.2",
+    "react-chartjs-2": "^2.7.0",
     "react-fontawesome": "^1.6.1",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.13.1",

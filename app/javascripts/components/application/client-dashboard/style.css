@@ -1,0 +1,11 @@
+.cd-label {
+  font-size: 0.75em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #AAA;
+  margin-bottom: 0.75rem;
+}
+
+.text-teal {
+  color: #39BFC9;
+}

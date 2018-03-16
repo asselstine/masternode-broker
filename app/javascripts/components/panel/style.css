@@ -1,0 +1,26 @@
+.nai-panel {
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.nai-panel p {
+  margin-bottom: 0.75em;
+}
+
+.nai-panel__content {
+  padding: 1.5rem;
+}
+
+.nai-panel__heading {
+  height: 4px;
+  width: 100%;
+}
+
+.nai-panel__teal {
+  background-color: #39BFC9;
+}
+
+.nai-panel__icon {
+  padding-right: 0.5rem;
+}

@@ -37,9 +37,11 @@ $menu-padding-left: 1.5rem;
 
 .navcol__menu .menu-label {
   color: #89A5BA;
+  letter-spacing: 0;
   padding-left: $menu-padding-left;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid #D1D1D1;
+  font-weight: 600;
 }
 
 .navcol__menu .menu-label:not(:last-child) {

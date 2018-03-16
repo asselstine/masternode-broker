@@ -36,7 +36,7 @@ export default ({className}) => {
       </div>
       <aside className="menu navcol__menu">
         <p className="menu-label">
-          General
+          Clients
         </p>
         <ul className="menu-list">
           {clients.map((client) => <li key={client}><a className='has-text-weight-bold'>{client}</a></li>)}

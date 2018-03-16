@@ -1,5 +1,6 @@
 // Import the page's CSS. Webpack will know what to do with it.
-require('bulma/css/bulma.css');
+require('bulma/css/bulma.css')
+require('./type')
 
 import React from 'react'
 import ReactDOM from 'react-dom'
