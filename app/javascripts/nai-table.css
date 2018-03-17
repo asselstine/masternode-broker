@@ -1,0 +1,27 @@
+.nai-table.table thead th,
+.nai-table.table thead td {
+  border-color: black;
+  padding: 0.5rem 0.75rem;
+}
+
+.nai-table.table tbody th,
+.nai-table.table tbody td {
+  border: none;
+}
+
+.nai-table.table thead {
+  text-transform: uppercase;
+  font-size: 0.6rem;
+}
+
+.nai-table.table tbody {
+  font-size: 1rem;
+}
+
+.nai-table .actions {
+  width: 6rem;
+}
+
+.nai-table .actions .fa-button {
+  margin-right: 0.5em;
+}
