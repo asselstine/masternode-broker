@@ -1,5 +1,5 @@
 import React from 'react'
-
+import classnames from 'classnames'
 import style from './style'
 
 export default ({className}) => {
@@ -39,7 +39,15 @@ export default ({className}) => {
           Clients
         </p>
         <ul className="menu-list">
-          {clients.map((client) => <li key={client}><a className='has-text-weight-bold'>{client}</a></li>)}
+          {clients.map((client, index) => {
+            return (
+              <li key={client}>
+                <a className={classnames('has-text-weight-bold', { 'is-active': index === 0 })}>
+                  {client}
+                </a>
+              </li>
+            )
+          })}
         </ul>
       </aside>
 

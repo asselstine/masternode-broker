@@ -53,6 +53,23 @@ $menu-padding-left: 1.5rem;
   padding: 0.6em 0.75em 0.6em $menu-padding-left;
 }
 
+.navcol__menu .menu-list a.is-active {
+  position: relative;
+}
+
+.navcol__menu .menu-list a.is-active::after {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  height: 0;
+  width: 0;
+  border-right: 10px solid white;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  content: '\a0';
+}
+
+.navcol__menu .menu-list a.is-active,
 .navcol__menu .menu-list a:hover {
   background-color: #103C5F;
   color: #FFFFFF;
