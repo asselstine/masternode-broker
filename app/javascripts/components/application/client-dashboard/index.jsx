@@ -7,6 +7,7 @@ import Panel from '@/components/panel'
 import style from './style'
 import { Modal } from '@/components/modal'
 import LineChart from '@/components/line-chart'
+import SelectAsset from '@/components/select-asset'
 
 import {
   Doughnut
@@ -19,7 +20,6 @@ export default class extends Component {
     this.state = {
       assetType: 'NodeAIDash',
       assetUnits: 0,
-      assetModalOpen: false
     }
   }
 
@@ -109,13 +109,6 @@ export default class extends Component {
         date: '3/6/18 08:01:30',
         status: 'Complete'
       },
-    ]
-
-
-    var selectOptions = [
-      'NodeAIDash',
-      'NodeAIHighCAPMN',
-      'NodeAIDiversifiedIncome'
     ]
 
     return (
@@ -226,14 +219,11 @@ export default class extends Component {
                 <h1>New Transaction</h1>
                 <form onSubmit={(e) => {
                     e.preventDefault()
-                    // this.setState({assetModalOpen: true})
                   }}>
                   <h5 className='cd-label'>Select Asset</h5>
                   <div className="field">
                     <div className="select">
-                      <select onChange={(e) => this.setState({assetType: e.target.value})} value={this.state.assetType}>
-                        {selectOptions.map((option) => <option key={option}>{option}</option>)}
-                      </select>
+                      <SelectAsset onChange={(e) => this.setState({assetType: e.target.value})} value={this.state.assetType} />
                     </div>
                   </div>
                   <h5 className='cd-label'>Number of Units to Buy</h5>
@@ -245,16 +235,6 @@ export default class extends Component {
                   <input type='submit' className='button is-rounded is-rust nai-panel__content__confirm' value='Begin Transaction' />
                 </form>
               </Panel>
-              <Modal isOpen={this.state.assetModalOpen} onClose={(e) => this.setState({assetModalOpen: false})}>
-                <div className='box'>
-                  <h1 className='title'>Create New Asset</h1>
-                  <form>
-
-
-
-                  </form>
-                </div>
-              </Modal>
             </div>
           </div>
         </div>

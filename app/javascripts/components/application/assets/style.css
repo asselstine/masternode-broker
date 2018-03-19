@@ -4,6 +4,14 @@
   float: right;
 }
 
+.assets__create {
+  margin-bottom: 1em;
+}
+
+.assets__create-button .fa {
+  padding-right: 0.3em;
+}
+
 .assets__table__label {
   font-size: 0.75rem;
   color: #777;
