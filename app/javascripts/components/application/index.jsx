@@ -12,7 +12,7 @@ import ClientDashboard from './client-dashboard'
 
 export const Application = () => {
   return (
-    <div className='columns is-gapless'>
+    <div className='columns is-gapless min-height-100'>
       <Navcol className='app__navcol' />
       <div className='column'>
         <nav className="navbar app__navbar" role="navigation" aria-label="main navigation">
