@@ -7,33 +7,44 @@ import {
 
 import style from './style'
 import UserNav from './user-nav'
-import Navcol from './navcol'
+import BrokerNavcol from './broker-navcol'
 import BrokerNavbar from './broker-navbar'
+import ManagerNavcol from './manager-navcol'
 import ClientDashboard from './client-dashboard'
+import Assets from './assets'
 
 export const Application = () => {
   return (
       <Switch>
         <Route path='/assets'>
-          <div className='columns is-gapless min-height-100'>
-            <Navcol className='app__navcol' />
-            <div className='column'>
+
+          <div className='app-container min-height-100'>
+            <ManagerNavcol className='app__navcol' />
+            <div className='app-container__content'>
               <UserNav />
-              <BrokerNavbar navItems={[
+              <BrokerNavbar
+                navItems={[
                   'Home', 'Assets', 'Transactions', 'Configuration', 'Alerts'
-                ]}/>
+                ]}
+                activeIndex={1}
+                to='/' />
+              <Assets />
             </div>
           </div>
+
         </Route>
         <Route path='/'>
-          <div className='columns is-gapless min-height-100'>
-            <Navcol className='app__navcol' />
-            <div className='column'>
+          
+          <div className='app-container min-height-100'>
+            <BrokerNavcol className='app__navcol' />
+            <div className='app-container__content'>
               <UserNav />
-              <BrokerNavbar />
+              <BrokerNavbar
+                to='/assets' />
               <ClientDashboard />
             </div>
           </div>
+
         </Route>
       </Switch>
   )

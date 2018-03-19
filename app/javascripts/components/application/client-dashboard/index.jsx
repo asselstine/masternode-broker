@@ -6,9 +6,9 @@ import FontAwesome from 'react-fontawesome'
 import Panel from '@/components/panel'
 import style from './style'
 import { Modal } from '@/components/modal'
+import LineChart from '@/components/line-chart'
 
 import {
-  Line,
   Doughnut
 } from 'react-chartjs-2'
 import FaButton from './fa-button'
@@ -24,34 +24,6 @@ export default class extends Component {
   }
 
   render () {
-    var lineData = {
-    	labels: ["January", "February", "March", "April", "May", "June", "July"],
-    	datasets: [
-    		{
-    			borderColor: '#2F6690',
-          pointBackgroundColor: '#FFF',
-          pointBorderColor: '#39BFC9',
-          pointBorderWidth: 2,
-          pointRadius: 5,
-          fill: false,
-    			data: [12, 24, 40, 34, 50, 52, 70]
-    		}
-    	]
-    };
-
-    var lineOptions = {
-      legend: {
-        display: false
-      },
-      responsive: true,
-      maintainAspectRatio: false,
-      elements: {
-        line: {
-          tension: 0, // disables bezier curves
-        }
-      }
-    }
-
     var pieData = {
       labels: ["Dash", "High Cap MN", "Diversified Income", "High Cap POS"],
       datasets: [
@@ -174,11 +146,7 @@ export default class extends Component {
               <h5 className='cd-label'>Performance</h5>
               <div className='columns'>
                 <div className='column'>
-                  <Line
-                    data={lineData}
-                    options={lineOptions}
-                    width={300}
-                    height={200} />
+                  <LineChart />
                 </div>
                 <div className='column'>
                   <Doughnut
@@ -274,7 +242,7 @@ export default class extends Component {
                       <input className="input" type="number" onChange={(e) => this.setState({assetUnits: e.target.value})} value={this.state.assetUnits} />
                     </div>
                   </div>
-                  <input type='submit' className='button is-rounded is-rust' value='Begin Transaction' />
+                  <input type='submit' className='button is-rounded is-rust nai-panel__content__confirm' value='Begin Transaction' />
                 </form>
               </Panel>
               <Modal isOpen={this.state.assetModalOpen} onClose={(e) => this.setState({assetModalOpen: false})}>

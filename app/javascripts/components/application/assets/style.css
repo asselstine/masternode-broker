@@ -1,0 +1,32 @@
+.table-header-subtitle {
+  color: #2F6690;
+  font-weight: bold;
+  float: right;
+}
+
+.assets__table__label {
+  font-size: 0.75rem;
+  color: #777;
+}
+
+.assets__table__value {
+  font-size: 0.875rem;
+}
+
+.assets__table__label {
+  top: -4px;
+  position: relative;
+  font-weight: normal;
+  color: #777777;
+  text-transform: uppercase;
+}
+
+.assets__table__value {
+  font-weight: bold;
+}
+
+.assets__table__value small {
+  font-weight: normal;
+  color: #777;
+  padding-left: 1em;
+}

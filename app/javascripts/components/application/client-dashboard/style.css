@@ -3,6 +3,9 @@
   text-transform: uppercase;
   font-weight: 600;
   color: #AAA;
+}
+
+h5.cd-label {
   margin-bottom: 0.75rem;
 }
 
@@ -14,6 +17,10 @@
   color: #76D3DA;
 }
 
+.button {
+  transition: 0.1s;
+}
+
 .button.is-rust {
   background-color: #F45D45;
   border-color: transparent;
@@ -21,12 +28,23 @@
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.8rem;
-  height: 4.25em;
-  width: 100%;
+  height: 3.25em;
 }
 
 .button.is-rust:hover {
   background-color: #dc4128;
+  border-color: transparent;
+  color: #fff;
+}
+
+.button.is-rust.is-inverted {
+  background-color: transparent;
+  border-color: #F45D45;
+  color: #F45D45;
+}
+
+.button.is-rust.is-inverted:hover {
+  background-color: #F45D45;
   border-color: transparent;
   color: #fff;
 }

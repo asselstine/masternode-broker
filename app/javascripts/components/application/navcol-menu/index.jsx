@@ -3,7 +3,7 @@ import classnames from 'classnames'
 
 import style from './style'
 
-export default ({title, items}) => {
+export default ({title, items, activeIndex}) => {
   return (
     <aside className="menu navcol__menu">
       <p className="menu-label">
@@ -13,7 +13,7 @@ export default ({title, items}) => {
         {items.map((item, index) => {
           return (
             <li key={item}>
-              <a className={classnames('has-text-weight-bold', { 'is-active': index === 0 })}>
+              <a className={classnames('has-text-weight-bold', { 'is-active': index === activeIndex })}>
                 {item}
               </a>
             </li>

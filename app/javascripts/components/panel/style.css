@@ -28,3 +28,8 @@
 .nai-panel__icon {
   padding-right: 0.5rem;
 }
+
+.nai-panel__content__confirm {
+  width: 100%;
+  height: 3.75rem !important;
+}

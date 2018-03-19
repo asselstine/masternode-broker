@@ -10,7 +10,7 @@ export default ({title}) => {
           white labeled logo
         </div>
       </div>
-      <h3 className='navcol__header__title text-center is-size-5 has-text-weight-light'>Broker Portal</h3>
+      <h3 className='navcol__header__title text-center is-size-5 has-text-weight-light'>{title}</h3>
     </div>
   )
 }
