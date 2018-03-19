@@ -13,13 +13,28 @@ import ClientDashboard from './client-dashboard'
 
 export const Application = () => {
   return (
-    <div className='columns is-gapless min-height-100'>
-      <Navcol className='app__navcol' />
-      <div className='column'>
-        <UserNav />
-        <BrokerNavbar />
-        <ClientDashboard />
-      </div>
-    </div>
+      <Switch>
+        <Route path='/assets'>
+          <div className='columns is-gapless min-height-100'>
+            <Navcol className='app__navcol' />
+            <div className='column'>
+              <UserNav />
+              <BrokerNavbar navItems={[
+                  'Home', 'Assets', 'Transactions', 'Configuration', 'Alerts'
+                ]}/>
+            </div>
+          </div>
+        </Route>
+        <Route path='/'>
+          <div className='columns is-gapless min-height-100'>
+            <Navcol className='app__navcol' />
+            <div className='column'>
+              <UserNav />
+              <BrokerNavbar />
+              <ClientDashboard />
+            </div>
+          </div>
+        </Route>
+      </Switch>
   )
 }

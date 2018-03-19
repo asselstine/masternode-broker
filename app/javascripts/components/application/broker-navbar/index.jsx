@@ -1,31 +1,30 @@
 import React from 'react'
-
+import classnames from 'classnames'
 import FontAwesome from 'react-fontawesome'
 import style from './style'
 
-export default (props) => {
+export default ({navItems}) => {
+
+  navItems = navItems || [
+    'Details',
+    'Analysis',
+    'Transactions',
+    'Reports',
+    'Portal',
+    'Files'
+  ]
+
   return (
     <nav className="navbar broker-navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-menu is-active">
         <div className='navbar-start'>
-          <a className='navbar-item is-uppercase is-size-7 has-text-weight-bold is-active'>
-            Details
-          </a>
-          <a className='navbar-item is-uppercase is-size-7 has-text-weight-bold'>
-            Analysis
-          </a>
-          <a className='navbar-item is-uppercase is-size-7 has-text-weight-bold'>
-            Transactions
-          </a>
-          <a className='navbar-item is-uppercase is-size-7 has-text-weight-bold'>
-            Reports
-          </a>
-          <a className='navbar-item is-uppercase is-size-7 has-text-weight-bold'>
-            Portal
-          </a>
-          <a className='navbar-item is-uppercase is-size-7 has-text-weight-bold'>
-            Files
-          </a>
+          {navItems.map((item, index) => {
+            return (
+              <a key={item} className={classnames('navbar-item is-uppercase is-size-7 has-text-weight-bold', { 'is-active': index === 0 })}>
+                {item}
+              </a>
+            )
+          })}
         </div>
         <div className='navbar-end'>
           <div className='navbar-item'>

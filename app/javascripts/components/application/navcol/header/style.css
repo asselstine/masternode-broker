@@ -1,0 +1,23 @@
+.navcol__header {
+  background: linear-gradient(#4B84AF, #194C75);
+  text-align: center;
+  padding: 2rem;
+}
+
+.navcol__header__title {
+  color: white;
+  margin-top: 1.25rem;
+}
+
+.navcol__header__circle {
+  background-color: white;
+  border-radius: 50%;
+  height: 128px;
+  width: 128px;
+  display: inline-block;
+  text-align: center;
+}
+
+.navcol__header__circle__text {
+  padding: 3.5rem 0rem;
+}
