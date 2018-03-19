@@ -182,13 +182,13 @@ export default (props) => {
                   <td>09/15/17 10:13:19</td>
                   <td>15</td>
                   <td>Reward</td>
-                  <td>Pending</td>
+                  <td>Complete</td>
                 </tr>
                 <tr>
                   <td>04/30/17 09:32:05</td>
                   <td>15</td>
                   <td>Reward</td>
-                  <td>Pending</td>
+                  <td>Complete</td>
                 </tr>
               </tbody>
             </table>
