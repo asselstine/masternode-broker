@@ -8,7 +8,7 @@ export default (props) => {
     <nav className="navbar broker-navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-menu is-active">
         <div className='navbar-start'>
-          <a className='navbar-item is-uppercase is-size-7 has-text-weight-bold'>
+          <a className='navbar-item is-uppercase is-size-7 has-text-weight-bold is-active'>
             Details
           </a>
           <a className='navbar-item is-uppercase is-size-7 has-text-weight-bold'>

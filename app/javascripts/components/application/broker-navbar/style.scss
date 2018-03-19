@@ -10,6 +10,8 @@
   padding: 1.25rem 2rem;
 }
 
+.broker-navbar a.navbar-item.is-active:not(:hover),
+.broker-navbar a.navbar-item.is-active,
 .broker-navbar a.navbar-item:hover {
   color: #2F6690;
   background-color: white;
