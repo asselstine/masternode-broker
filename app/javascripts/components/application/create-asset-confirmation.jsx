@@ -6,7 +6,7 @@ import SelectAsset from '@/components/select-asset'
 export default () => {
   return (
     <section className='section'>
-      <div className='container is-widescreen'>
+      <div className='container is-fluid'>
         <div className='columns is-centered'>
           <div className='column is-two-thirds-desktop is-three-fifths-widescreen is-one-half-fullhd'>
             <h1>Confirmation: Create Asset</h1>
