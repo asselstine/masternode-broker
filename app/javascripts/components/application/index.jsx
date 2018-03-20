@@ -14,6 +14,7 @@ import ManagerNavbar from './manager-navbar'
 import AssetNavcol from './asset-navcol'
 import ClientDashboard from './client-dashboard'
 import CreateAssetForm from './create-asset-form'
+import AssetDetails from './asset-details'
 import Assets from './assets'
 
 export const Application = () => {
@@ -37,6 +38,17 @@ export const Application = () => {
               <UserNav />
               <ManagerNavbar />
               <Assets />
+            </div>
+          </div>
+        </Route>
+
+        <Route path='/asset-details'>
+          <div className='app-container min-height-100'>
+            <AssetNavcol />
+            <div className='app-container__content'>
+              <UserNav />
+              <ManagerNavbar />
+              <AssetDetails />
             </div>
           </div>
         </Route>

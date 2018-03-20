@@ -1,204 +1,150 @@
-import React, {
-  Component
-} from 'react'
-import classnames from 'classnames'
+import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-import LineChart from '@/components/line-chart'
-import style from './style'
-import FontAwesome from 'react-fontawesome'
+import HField from '@/components/bulma/h-field'
 
-export default class extends Component {
-  render () {
-    var buttons = [
-      'NA123',
-      'NA245',
-      'NA246',
-      'NA746',
-      'NA127',
-      'NA543'
-    ]
+function oneOf(array) {
+  return array[parseInt(Math.random() * array.length)]
+}
 
-    return (
-      <section className='section'>
-        <div className='container is-fluid'>
-          <div className='level'>
-            <div className='level-left'>
-              <span className='level-item cd-label is-inline-block'>Assets</span>
-              {buttons.map((name, index) => {
-                return (
-                  <button key={name} className={classnames('level-item button is-rust is-rounded is-inline-block', { 'is-inverted': index !== 0 })}>{name}</button>
-                )
-              })}
-            </div>
-          </div>
-
-          <div className='columns'>
-            <div className='column is-two-fifths'>
-              <h1 className='no-margin'>
-                Asset Details
-                <span className='table-header-subtitle'>NA123</span>
-              </h1>
-              <table className='table nai-table is-striped is-fullwidth'>
-                <thead>
-                  <tr>
-                    <th></th>
-                    <th></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <span className='assets__table__label'>TYPE</span>
-                    </td>
-                    <td className='assets__table__value'>
-                      ZCoin
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <span className='assets__table__label'>CLASS</span>
-                    </td>
-                    <td className='assets__table__value'>
-                      Masternode
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <span className='assets__table__label'>Status</span>
-                    </td>
-                    <td className='assets__table__value'>
-                      Online
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <span className='assets__table__label'>Balance</span>
-                    </td>
-                    <td className='assets__table__value'>
-                      1150
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <span className='assets__table__label'>Value (USD)</span>
-                    </td>
-                    <td className='assets__table__value'>
-                      $51,175
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <span className='assets__table__label'>ASSIGNMENT</span>
-                    </td>
-                    <td className='assets__table__value'>
-                      NodeAIGrowthIncome
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <span className='assets__table__label'>Mode</span>
-                    </td>
-                    <td className='assets__table__value'>
-                      Accumulation
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-
-            </div>
-
-            <div className='column is-three-fifths'>
-              <LineChart />
-            </div>
-          </div>
-
-          <div className='columns'>
-            <div className='column is-two-fifths'>
-              <h1 className='no-margin'>
-                Performance
-                <span className='table-header-subtitle'>89.9%</span>
-              </h1>
-              <table className='table nai-table is-striped is-fullwidth'>
-                <thead>
-                  <tr>
-                    <th></th>
-                    <th></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <span className='assets__table__label'>NODE BALANCE</span>
-                    </td>
-                    <td className='assets__table__value'>
-                      1000
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <span className='assets__table__label'>Node Purchase Value</span>
-                    </td>
-                    <td className='assets__table__value'>
-                      $25,500 <small>($25.50/unit)</small>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <span className='assets__table__label'>Current Balance</span>
-                    </td>
-                    <td className='assets__table__value'>
-                      1150
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <span className='assets__table__label'>Balance Value</span>
-                    </td>
-                    <td className='assets__table__value'>
-                      $47,725 <small>($41.50/unit)</small>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div className='column is-three-fifths'>
-              <h1 className='no-margin'>
-                Transactions
-              </h1>
-              <table className='table nai-table is-striped is-fullwidth'>
-                <thead>
-                  <tr>
-                    <th>Date</th>
-                    <th>Amount</th>
-                    <th>Type</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>03/06/18 08:01:30</td>
-                    <td>15</td>
-                    <td>Reward</td>
-                    <td>Pending</td>
-                  </tr>
-                  <tr>
-                    <td>09/15/17 10:13:19</td>
-                    <td>15</td>
-                    <td>Reward</td>
-                    <td>Complete</td>
-                  </tr>
-                  <tr>
-                    <td>04/30/17 09:32:05</td>
-                    <td>15</td>
-                    <td>Reward</td>
-                    <td>Complete</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </section>
-    )
+function createAsset(id) {
+  return {
+    id: id,
+    mode: oneOf(['Mode A', 'Mode B', 'Mode C']),
+    class: oneOf(['Class A', 'Class B', 'Class C']),
+    assignment: oneOf(['Pending', 'Complete']),
+    status: oneOf(['On', 'Off'])
   }
+}
+
+export default () => {
+
+  var assets = [
+    createAsset('NA123'), createAsset('NA124'), createAsset('NA125')
+  ]
+
+  return (
+    <section className='section'>
+      <div className='container is-fluid'>
+        <h1>Assets</h1>
+
+        <form className='columns'>
+          <div className='column'>
+            <div className='field is-horizontal'>
+              <div className='field-label is-normal'>
+                <label className='label'>Class</label>
+              </div>
+              <div className='field-body'>
+                <div className='field'>
+                  <div className='select'>
+                    <select>
+                      <option>Any class</option>
+                      <option>Class A</option>
+                      <option>Class B</option>
+                      <option>Class C</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <HField
+              label={
+                <label className='label'>Status</label>
+              }
+              body={
+                <div className='field'>
+                  <div className='select'>
+                    <select>
+                      <option>Assigned</option>
+                      <option>Pending</option>
+                      <option>Complete</option>
+                    </select>
+                  </div>
+                </div>
+              } />
+          </div>
+          <div className='column'>
+            <HField
+              label={
+                <label className='label'>Assignment</label>
+              }
+              body={
+                <div className='field'>
+                  <div className='select'>
+                    <select>
+                      <option>Assigned</option>
+                      <option>Pending</option>
+                      <option>Complete</option>
+                    </select>
+                  </div>
+                </div>
+              } />
+            <HField
+              label={
+                <label className='label'>Mode</label>
+              }
+              body={
+                <div className='field'>
+                  <div className='select'>
+                    <select>
+                      <option>Assigned</option>
+                      <option>Pending</option>
+                      <option>Complete</option>
+                    </select>
+                  </div>
+                </div>
+              } />
+
+          </div>
+        </form>
+
+        <table className='table nai-table is-fullwidth is-striped'>
+
+          <thead>
+            <tr>
+              <th>
+                ID
+              </th>
+              <th>
+                Class
+              </th>
+              <th>
+                Assignment
+              </th>
+              <th>
+                Status
+              </th>
+              <th>
+                Mode
+              </th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {assets.map((asset) => {
+              return (
+                <tr key={asset.id}>
+                  <td>
+                    <NavLink to='/asset-details'>{asset.id}</NavLink>
+                  </td>
+                  <td>
+                    {asset.class}
+                  </td>
+                  <td>
+                    {asset.assignment}
+                  </td>
+                  <td>
+                    {asset.status}
+                  </td>
+                  <td>
+                    {asset.mode}
+                  </td>
+                </tr>
+              )
+            })}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  )
 }
