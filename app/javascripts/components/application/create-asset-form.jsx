@@ -9,7 +9,7 @@ export default () => {
       <div className='container is-fluid'>
         <h1>Create Asset</h1>
         <form className='columns'>
-          <div className='column is-four-fifths-desktop is-three-fifths-widescreen'>
+          <div className='column is-four-fifths'>
 
             <div className='field is-horizontal'>
               <div className='field-label is-normal'>
@@ -17,7 +17,7 @@ export default () => {
               </div>
               <div className='field-body'>
                 <div className='field'>
-                  <p className='control'>
+                  <p className='control is-expanded'>
                     <input className='input' />
                   </p>
                 </div>
@@ -29,13 +29,17 @@ export default () => {
                 <label className="label">Type</label>
               </div>
               <div className='field-body'>
-                <div className='field'>
-                  <p className='select'>
-                    <SelectAsset />
-                  </p>
-                  <label className='checkbox is-normal'>
-                    <input type='checkbox' /> Masternode
-                  </label>
+                <div className='field has-addons'>
+                  <div className='control is-expanded'>
+                    <p className='select is-fullwidth'>
+                      <SelectAsset />
+                    </p>
+                  </div>
+                  <div className='control'>
+                    <label className='checkbox is-normal'>
+                      <input type='checkbox' /> Masternode
+                    </label>
+                  </div>
                 </div>
               </div>
             </div>
@@ -56,19 +60,15 @@ export default () => {
                 <label className='label'>Buy</label>
               </div>
               <div className='field-body'>
-                <div className='columns'>
-                  <div className='column'>
-                    <div className='field has-addons'>
-                      <div className='control is-expanded'>
-                        <input type='number' className='input' />
-                      </div>
-                      <p className='control'>
-                        <span className='button is-static'>
-                          Units
-                        </span>
-                      </p>
-                    </div>
+                <div className='field has-addons'>
+                  <div className='control is-expanded'>
+                    <input type='number' className='input' />
                   </div>
+                  <p className='control'>
+                    <span className='button is-static'>
+                      Units
+                    </span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -79,7 +79,7 @@ export default () => {
               </div>
               <div className='field-body'>
                 <div className='field'>
-                  <p className='select'>
+                  <p className='select is-fullwidth'>
                     <select>
                       <option>Automatic</option>
                     </select>
@@ -94,7 +94,7 @@ export default () => {
               </div>
               <div className='field-body'>
                 <div className='field'>
-                  <p className='select'>
+                  <p className='select is-fullwidth'>
                     <select>
                       <option>Alacundation</option>
                     </select>
@@ -109,7 +109,7 @@ export default () => {
               </div>
               <div className='field-body'>
                 <div className='field'>
-                  <p className='select'>
+                  <p className='select is-fullwidth'>
                     <select>
                       <option>Unassigned</option>
                       <option>4321 Company Inc.</option>
@@ -125,7 +125,7 @@ export default () => {
               </div>
               <div className='field-body'>
                 <div className='field'>
-                  <p className='select'>
+                  <p className='select is-fullwidth'>
                     <select>
                       <option>Accumulation</option>
                       <option>Mode B</option>
