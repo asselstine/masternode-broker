@@ -1,6 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
+import SortButton from '@/components/sort-button'
+
 import HField from '@/components/bulma/h-field'
 
 function oneOf(array) {
@@ -28,13 +30,10 @@ export default () => {
       <div className='container is-fluid'>
         <h1>Assets</h1>
 
-        <form className='columns'>
-          <div className='column'>
-            <div className='field is-horizontal'>
-              <div className='field-label is-normal'>
-                <label className='label'>Class</label>
-              </div>
-              <div className='field-body'>
+        <form className='box'>
+          <div className='level'>
+            <div className='level-left'>
+              <div className='level-item'>
                 <div className='field'>
                   <div className='select'>
                     <select>
@@ -46,55 +45,45 @@ export default () => {
                   </div>
                 </div>
               </div>
+              <div className='level-item'>
+                <div className='field'>
+                  <div className='select'>
+                    <select>
+                      <option>Any status</option>
+                      <option>Assigned</option>
+                      <option>Pending</option>
+                      <option>Complete</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div className='level-item'>
+                <div className='field'>
+                  <div className='select'>
+                    <select>
+                      <option>Any Assignment</option>
+                      <option>Pending</option>
+                      <option>Complete</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div className='level-item'>
+                <div className='field'>
+                  <div className='select'>
+                    <select>
+                      <option>Any mode</option>
+                      <option>Assigned</option>
+                      <option>Pending</option>
+                      <option>Complete</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div className='level-item'>
+                <a className='button is-primary'>Filter</a>
+              </div>
             </div>
-            <HField
-              label={
-                <label className='label'>Status</label>
-              }
-              body={
-                <div className='field'>
-                  <div className='select'>
-                    <select>
-                      <option>Assigned</option>
-                      <option>Pending</option>
-                      <option>Complete</option>
-                    </select>
-                  </div>
-                </div>
-              } />
-          </div>
-          <div className='column'>
-            <HField
-              label={
-                <label className='label'>Assignment</label>
-              }
-              body={
-                <div className='field'>
-                  <div className='select'>
-                    <select>
-                      <option>Assigned</option>
-                      <option>Pending</option>
-                      <option>Complete</option>
-                    </select>
-                  </div>
-                </div>
-              } />
-            <HField
-              label={
-                <label className='label'>Mode</label>
-              }
-              body={
-                <div className='field'>
-                  <div className='select'>
-                    <select>
-                      <option>Assigned</option>
-                      <option>Pending</option>
-                      <option>Complete</option>
-                    </select>
-                  </div>
-                </div>
-              } />
-
           </div>
         </form>
 
@@ -103,19 +92,19 @@ export default () => {
           <thead>
             <tr>
               <th>
-                ID
+                <SortButton title='ID' />
               </th>
               <th>
-                Class
+                <SortButton title='Class' />
               </th>
               <th>
-                Assignment
+                <SortButton title='Assignment'/>
               </th>
               <th>
-                Status
+                <SortButton title='Status' />
               </th>
               <th>
-                Mode
+                <SortButton title='Mode' />
               </th>
             </tr>
           </thead>

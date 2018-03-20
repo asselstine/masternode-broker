@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import SelectAsset from '@/components/select-asset'
 
@@ -8,11 +9,11 @@ export default () => {
       <div className='container is-fluid'>
         <h1>Create Asset</h1>
         <form className='columns'>
-          <div className='column is-half'>
+          <div className='column is-four-fifths-desktop is-three-fifths-widescreen'>
 
             <div className='field is-horizontal'>
               <div className='field-label is-normal'>
-                <label className="label">Asset Name</label>
+                <label className="label">ID</label>
               </div>
               <div className='field-body'>
                 <div className='field'>
@@ -25,7 +26,7 @@ export default () => {
 
             <div className='field is-horizontal'>
               <div className='field-label is-normal'>
-                <label className="label">CryptoAsset</label>
+                <label className="label">Type</label>
               </div>
               <div className='field-body'>
                 <div className='field'>
@@ -55,15 +56,19 @@ export default () => {
                 <label className='label'>Buy</label>
               </div>
               <div className='field-body'>
-                <div className='field has-addons'>
-                  <div className='control is-expanded'>
-                    <input type='number' className='input' />
+                <div className='columns'>
+                  <div className='column'>
+                    <div className='field has-addons'>
+                      <div className='control is-expanded'>
+                        <input type='number' className='input' />
+                      </div>
+                      <p className='control'>
+                        <span className='button is-static'>
+                          Units
+                        </span>
+                      </p>
+                    </div>
                   </div>
-                  <p className='control'>
-                    <span className='button is-static'>
-                      Units
-                    </span>
-                  </p>
                 </div>
               </div>
             </div>
@@ -85,7 +90,7 @@ export default () => {
 
             <div className='field is-horizontal'>
               <div className='field-label is-normal'>
-                <label className="label">Order Type</label>
+                <label className="label">Order</label>
               </div>
               <div className='field-body'>
                 <div className='field'>
@@ -137,9 +142,9 @@ export default () => {
               <div className="field-body">
                 <div className="field">
                   <div className="control">
-                    <button className="button is-rust">
+                    <Link to='/assets/confirm' className="button is-rust">
                       Create Asset
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
