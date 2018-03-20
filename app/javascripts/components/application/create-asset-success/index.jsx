@@ -13,8 +13,7 @@ export default () => {
           <div className='column is-two-thirds-desktop is-three-fifths-widescreen is-one-half-fullhd'>
             <h1>Success <FontAwesome name='check-circle' className='create-asset-success__icon' /></h1>
             <div className='box'>
-              <h2 className='subtitle'>NA123 was successfully created</h2>
-              <Link to='/asset-details'>Go to NA123</Link>
+              <h2 className='subtitle'><Link to='/asset-details'>NA123</Link> was successfully created</h2>
             </div>
           </div>
         </div>

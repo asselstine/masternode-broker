@@ -9,7 +9,7 @@ export default () => {
       <div className='container is-fluid'>
         <div className='columns is-centered'>
           <div className='column is-two-thirds-desktop is-three-fifths-widescreen is-one-half-fullhd'>
-            <h1>Confirmation: Create Asset</h1>
+            <h1>Confirm Create Asset</h1>
 
             <div className='box'>
               <table className='table nai-table is-striped is-fullwidth'>
