@@ -4,9 +4,9 @@ import Navcol from './navcol'
 import NavcolMenu from './navcol-menu'
 import NavcolHeader from './navcol-header'
 
-export default ({className}) => {
+export default ({className, items}) => {
 
-  var items = [
+  var items = items || [
     'Asset Dashboard',
     'Market Data',
     'Network Data',

@@ -6,16 +6,8 @@ import classnames from 'classnames'
 import LineChart from '@/components/line-chart'
 import style from './style'
 import FontAwesome from 'react-fontawesome'
-import CreateAssetModal from './create-asset-modal'
 
 export default class extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      createAssetModalIsOpen: false
-    }
-  }
-
   render () {
     var buttons = [
       'NA123',
@@ -29,13 +21,6 @@ export default class extends Component {
     return (
       <section className='section'>
         <div className='container is-fluid'>
-          <div className='assets__create'>
-            <button
-              className={classnames('assets__create-button button is-rust is-rounded is-inline-block')}
-              onClick={() => this.setState({createAssetModalIsOpen: true})}>
-              <FontAwesome name='plus' /> New Asset
-            </button>
-          </div>
           <div className='level'>
             <div className='level-left'>
               <span className='level-item cd-label is-inline-block'>Assets</span>
@@ -212,10 +197,6 @@ export default class extends Component {
               </table>
             </div>
           </div>
-
-          <CreateAssetModal
-            isOpen={this.state.createAssetModalIsOpen}
-            onClose={() => this.setState({createAssetModalIsOpen: false})} />
         </div>
       </section>
     )

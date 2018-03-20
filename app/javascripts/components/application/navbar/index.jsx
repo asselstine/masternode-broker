@@ -1,36 +1,14 @@
 import React from 'react'
-import classnames from 'classnames'
 import FontAwesome from 'react-fontawesome'
-import { Link } from 'react-router-dom'
 
 import style from './style'
 
-export default ({navItems, activeIndex, to}) => {
-
-  navItems = navItems || [
-    'Details',
-    'Analysis',
-    'Transactions',
-    'Reports',
-    'Portal',
-    'Files'
-  ]
-
-  activeIndex = activeIndex || 0
-
-  to = to || '/assets'
-
+export default ({children}) => {
   return (
     <nav className="navbar broker-navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-menu is-active">
         <div className='navbar-start'>
-          {navItems.map((item, index) => {
-            return (
-              <Link to={to} key={item} className={classnames('navbar-item is-uppercase is-size-7 has-text-weight-bold', { 'is-active': index === activeIndex })}>
-                {item}
-              </Link>
-            )
-          })}
+          {children}
         </div>
         <div className='navbar-end'>
           <div className='navbar-item'>

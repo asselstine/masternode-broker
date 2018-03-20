@@ -3,7 +3,7 @@ import classnames from 'classnames'
 
 import style from './style'
 
-export default ({title, items, activeIndex}) => {
+export default ({title, items, activeIndex, children}) => {
   return (
     <aside className="menu navcol__menu">
       <p className="menu-label">
@@ -19,6 +19,7 @@ export default ({title, items, activeIndex}) => {
             </li>
           )
         })}
+        {children}
       </ul>
     </aside>
   )
