@@ -5,6 +5,8 @@ import SortButton from '@/components/sort-button'
 
 import HField from '@/components/bulma/h-field'
 
+import style from './style'
+
 function oneOf(array) {
   return array[parseInt(Math.random() * array.length)]
 }
@@ -30,7 +32,7 @@ export default () => {
       <div className='container is-fluid'>
         <h1>Assets</h1>
 
-        <form className='box'>
+        <form className='assets__filters'>
           <div className='level'>
             <div className='level-left'>
               <div className='level-item'>
