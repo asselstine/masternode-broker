@@ -18,6 +18,7 @@ import CreateAssetConfirmation from './create-asset-confirmation'
 import CreateAssetSuccess from './create-asset-success'
 import AssetDetails from './asset-details'
 import Assets from './assets'
+import Home from './home'
 
 export const Application = () => {
   return (
@@ -82,8 +83,8 @@ export const Application = () => {
             <ManagerNavcol className='app__navcol' />
             <div className='app-container__content'>
               <UserNav />
-              <ManagerNavbar
-                to='/assets' />
+              <ManagerNavbar />
+              <Home />
             </div>
           </div>
         </Route>
