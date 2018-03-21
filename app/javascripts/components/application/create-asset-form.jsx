@@ -4,6 +4,19 @@ import { Link } from 'react-router-dom'
 import SelectAsset from '@/components/select-asset'
 
 export default () => {
+
+  var availability =
+    <div className='field is-horizontal'>
+      <div className='field-label is-normal'>
+      </div>
+      <div className='field-body'>
+        <p className='help'>
+          <small>Available: 474</small> <br />
+          <small>Required: 1000</small>
+        </p>
+      </div>
+    </div>
+
   return (
     <section className='section'>
       <div className='container is-fluid'>
@@ -35,7 +48,12 @@ export default () => {
                   <div className='field has-addons'>
                     <div className='control is-expanded'>
                       <p className='select is-fullwidth'>
-                        <SelectAsset />
+                        <select>
+                          <option>DASH</option>
+                          <option>XZC</option>
+                          <option>ENG</option>
+                          <option>ETH</option>
+                        </select>
                       </p>
                     </div>
                     <div className='control'>
@@ -47,16 +65,7 @@ export default () => {
                 </div>
               </div>
 
-              <div className='field is-horizontal'>
-                <div className='field-label is-normal'>
-                </div>
-                <div className='field-body'>
-                  <p className='help'>
-                    <small>Available: 474</small> <br />
-                    <small>Required: 1000</small>
-                  </p>
-                </div>
-              </div>
+              {availability}
 
               <div className='field is-horizontal'>
                 <div className='field-label'>
@@ -84,7 +93,9 @@ export default () => {
                   <div className='field'>
                     <p className='select is-fullwidth'>
                       <select>
-                        <option>Automatic</option>
+                        <option>Auto</option>
+                        <option>Bitfinex</option>
+                        <option>Gemini</option>
                       </select>
                     </p>
                   </div>
@@ -99,7 +110,9 @@ export default () => {
                   <div className='field'>
                     <p className='select is-fullwidth'>
                       <select>
-                        <option>Alacundation</option>
+                        <option>Auto</option>
+                        <option>Iceberg</option>
+                        <option>Market</option>
                       </select>
                     </p>
                   </div>
@@ -115,7 +128,7 @@ export default () => {
                     <p className='select is-fullwidth'>
                       <select>
                         <option>Unassigned</option>
-                        <option>4321 Company Inc.</option>
+                        <option>Assigned</option>
                       </select>
                     </p>
                   </div>
@@ -131,8 +144,7 @@ export default () => {
                     <p className='select is-fullwidth'>
                       <select>
                         <option>Accumulation</option>
-                        <option>Mode B</option>
-                        <option>Mode C</option>
+                        <option>Cashflow</option>
                       </select>
                     </p>
                   </div>
@@ -146,7 +158,7 @@ export default () => {
                   <div className="field">
                     <div className="control">
                       <Link to='/assets/confirm' className="button is-rust">
-                        Create Asset
+                        Next
                       </Link>
                     </div>
                   </div>
