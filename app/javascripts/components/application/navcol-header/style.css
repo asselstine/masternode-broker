@@ -9,6 +9,11 @@
   margin-top: 1.25rem;
 }
 
+.navcol__header__img {
+  width: 6rem;
+  padding-top: 1.5rem;
+}
+
 .navcol__header__circle {
   background-color: white;
   border-radius: 50%;
