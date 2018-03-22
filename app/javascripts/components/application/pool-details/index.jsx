@@ -10,12 +10,12 @@ import FontAwesome from 'react-fontawesome'
 export default class extends Component {
   render () {
     var buttons = [
-      'NA123',
-      'NA245',
-      'NA246',
-      'NA746',
-      'NA127',
-      'NA543'
+      'PNAI123',
+      'PNAI245',
+      'PNAI246',
+      'PNAI746',
+      'PNAI127',
+      'PNAI543'
     ]
 
     return (
@@ -36,7 +36,7 @@ export default class extends Component {
             <div className='column is-two-fifths'>
               <h1 className='no-margin'>
                 Pool Details
-                <span className='table-header-subtitle'>NA123</span>
+                <span className='table-header-subtitle'>PNAI456</span>
               </h1>
               <table className='table nai-table is-striped is-fullwidth'>
                 <thead>
