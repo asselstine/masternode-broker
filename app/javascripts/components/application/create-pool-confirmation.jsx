@@ -33,54 +33,28 @@ export default class extends Component {
                   <tbody>
                     <tr>
                       <td>
+                        <span className='assets__table__label'>ID</span>
+                      </td>
+                      <td className='assets__table__value'>
+                        P101
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
                         <span className='assets__table__label'>Name</span>
                       </td>
                       <td className='assets__table__value'>
-                        NA123
+                        NodeAI Masternode One
                       </td>
                     </tr>
                     <tr>
                       <td>
-                        <span className='assets__table__label'>Type</span>
+                        <span className='assets__table__label'>Status</span>
                       </td>
                       <td className='assets__table__value'>
-                        ETH
+                        Active
                       </td>
                     </tr>
-                    <tr>
-                      <td>
-                        <span className='assets__table__label'>Units</span>
-                      </td>
-                      <td className='assets__table__value'>
-                        400
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span className='assets__table__label'>Exchange</span>
-                      </td>
-                      <td className='assets__table__value'>
-                        Gemini
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span className='assets__table__label'>Order Type</span>
-                      </td>
-                      <td className='assets__table__value'>
-                        Auto
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        <span className='assets__table__label'>Assignment</span>
-                      </td>
-                      <td className='assets__table__value'>
-                        Unassigned
-                      </td>
-                    </tr>
-
                     <tr>
                       <td>
                         <span className='assets__table__label'>Mode</span>
@@ -89,7 +63,23 @@ export default class extends Component {
                         Accumulation
                       </td>
                     </tr>
+                    <tr>
+                      <td>
+                        <span className='assets__table__label'>Administrator</span>
+                      </td>
+                      <td className='assets__table__value'>
+                        NodeAI
+                      </td>
+                    </tr>
 
+                    <tr>
+                      <td>
+                        <span className='assets__table__label'>Value</span>
+                      </td>
+                      <td className='assets__table__value'>
+                        $23,451,200
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
 
