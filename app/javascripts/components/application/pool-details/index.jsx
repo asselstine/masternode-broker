@@ -10,12 +10,12 @@ import FontAwesome from 'react-fontawesome'
 export default class extends Component {
   render () {
     var buttons = [
-      'PNAI123',
-      'PNAI245',
-      'PNAI246',
-      'PNAI746',
-      'PNAI127',
-      'PNAI543'
+      'P101',
+      'P102',
+      'P103',
+      'P104',
+      'P105',
+      'P106'
     ]
 
     return (
@@ -36,7 +36,7 @@ export default class extends Component {
             <div className='column is-two-fifths'>
               <h1 className='no-margin'>
                 Pool Details
-                <span className='table-header-subtitle'>PNAI456</span>
+                <span className='table-header-subtitle'>P101</span>
               </h1>
               <table className='table nai-table is-striped is-fullwidth'>
                 <thead>
@@ -48,18 +48,18 @@ export default class extends Component {
                 <tbody>
                   <tr>
                     <td>
-                      <span className='assets__table__label'>TYPE</span>
+                      <span className='assets__table__label'>ID</span>
                     </td>
                     <td className='assets__table__value'>
-                      ZCoin
+                      P101
                     </td>
                   </tr>
                   <tr>
                     <td>
-                      <span className='assets__table__label'>CLASS</span>
+                      <span className='assets__table__label'>Name</span>
                     </td>
                     <td className='assets__table__value'>
-                      Masternode
+                      NodeAI Masternode One
                     </td>
                   </tr>
                   <tr>
@@ -67,31 +67,15 @@ export default class extends Component {
                       <span className='assets__table__label'>Status</span>
                     </td>
                     <td className='assets__table__value'>
-                      Online
+                      Active
                     </td>
                   </tr>
                   <tr>
                     <td>
-                      <span className='assets__table__label'>Balance</span>
+                      <span className='assets__table__label'>Administrator</span>
                     </td>
                     <td className='assets__table__value'>
-                      1150
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <span className='assets__table__label'>Value (USD)</span>
-                    </td>
-                    <td className='assets__table__value'>
-                      $51,175
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <span className='assets__table__label'>ASSIGNMENT</span>
-                    </td>
-                    <td className='assets__table__value'>
-                      NodeAIGrowthIncome
+                      NodeAI
                     </td>
                   </tr>
                   <tr>
@@ -102,9 +86,24 @@ export default class extends Component {
                       Accumulation
                     </td>
                   </tr>
+                  <tr>
+                    <td>
+                      <span className='assets__table__label'>Management Fee</span>
+                    </td>
+                    <td className='assets__table__value'>
+                      4.5%
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span className='assets__table__label'>Transaction Fee</span>
+                    </td>
+                    <td className='assets__table__value'>
+                      0.5%
+                    </td>
+                  </tr>
                 </tbody>
               </table>
-
             </div>
 
             <div className='column is-three-fifths'>
@@ -116,7 +115,6 @@ export default class extends Component {
             <div className='column is-two-fifths'>
               <h1 className='no-margin'>
                 Performance
-                <span className='table-header-subtitle'>89.9%</span>
               </h1>
               <table className='table nai-table is-striped is-fullwidth'>
                 <thead>
@@ -128,34 +126,34 @@ export default class extends Component {
                 <tbody>
                   <tr>
                     <td>
-                      <span className='assets__table__label'>NODE BALANCE</span>
+                      <span className='assets__table__label'>Pool Value</span>
                     </td>
                     <td className='assets__table__value'>
-                      1000
+                      $2,300,103
                     </td>
                   </tr>
                   <tr>
                     <td>
-                      <span className='assets__table__label'>Node Purchase Value</span>
+                      <span className='assets__table__label'>Performance (30 day)</span>
                     </td>
                     <td className='assets__table__value'>
-                      $25,500 <small>($25.50/unit)</small>
+                      +13% <small>($300,103)</small>
                     </td>
                   </tr>
                   <tr>
                     <td>
-                      <span className='assets__table__label'>Current Balance</span>
+                      <span className='assets__table__label'>Performance (YTD)</span>
                     </td>
                     <td className='assets__table__value'>
-                      1150
+                      +13% <small>($300,103)</small>
                     </td>
                   </tr>
                   <tr>
                     <td>
-                      <span className='assets__table__label'>Balance Value</span>
+                      <span className='assets__table__label'>Cashflow</span>
                     </td>
                     <td className='assets__table__value'>
-                      $47,725 <small>($41.50/unit)</small>
+                      $0
                     </td>
                   </tr>
                 </tbody>
@@ -163,35 +161,46 @@ export default class extends Component {
             </div>
             <div className='column is-three-fifths'>
               <h1 className='no-margin'>
-                Transactions
+                Assets
               </h1>
               <table className='table nai-table is-striped is-fullwidth'>
                 <thead>
                   <tr>
-                    <th>Date</th>
-                    <th>Amount</th>
-                    <th>Type</th>
+                    <th>AssetID</th>
+                    <th>Class</th>
                     <th>Status</th>
+                    <th>Mode</th>
+                    <th>Value</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>03/06/18 08:01:30</td>
-                    <td>15</td>
-                    <td>Reward</td>
+                    <td>NA123</td>
+                    <td>MN</td>
+                    <td>Online</td>
+                    <td>Accumulation</td>
+                    <td>$555,321</td>
+                  </tr>
+                  <tr>
+                    <td>NA248</td>
+                    <td>MN</td>
+                    <td>Online</td>
+                    <td>Accumulation</td>
+                    <td>$15,005</td>
+                  </tr>
+                  <tr>
+                    <td>NA749</td>
+                    <td>MN</td>
                     <td>Pending</td>
+                    <td>Accumulation</td>
+                    <td>$123,031</td>
                   </tr>
                   <tr>
-                    <td>09/15/17 10:13:19</td>
-                    <td>15</td>
-                    <td>Reward</td>
-                    <td>Complete</td>
-                  </tr>
-                  <tr>
-                    <td>04/30/17 09:32:05</td>
-                    <td>15</td>
-                    <td>Reward</td>
-                    <td>Complete</td>
+                    <td>NA545</td>
+                    <td>MN</td>
+                    <td>Online</td>
+                    <td>Accumulation</td>
+                    <td>$1,606,746</td>
                   </tr>
                 </tbody>
               </table>
