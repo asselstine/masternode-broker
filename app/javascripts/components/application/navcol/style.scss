@@ -2,5 +2,12 @@
   width: 310px;
   min-height: 100%;
   display: inline-block;
-  background-color: #194C75;
+  background-color: #2D2D2A;
+  position: relative;
+}
+
+.navcol__img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }

@@ -8,9 +8,9 @@ export default (props) => {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [
       {
-        borderColor: '#2F6690',
+        borderColor: '#26596B',
         pointBackgroundColor: '#FFF',
-        pointBorderColor: '#39BFC9',
+        pointBorderColor: '#43A2A1',
         pointBorderWidth: 2,
         pointRadius: 5,
         fill: false,

@@ -1,6 +1,16 @@
-@import '~bulma/bulma';
+@import 'colours';
 
+$text: $colour-dark;
 $primary: #F45D45;
+$link: $colour-teal;
+
+$navbar-background-color: $colour-blue;
+$navbar-item-color: $colour-grey;
+$navbar-item-hover-color: $colour-blue;
+$navbar-item-active-color: $colour-teal;
+$navbar-item-active-background-color: white;
+$navbar-item-hover-background-color: white;
+
 $notification-padding: 1.25rem 1.5rem 1.25rem 1.5rem;
 
 .is-horizontal .checkbox {
@@ -12,3 +22,5 @@ $notification-padding: 1.25rem 1.5rem 1.25rem 1.5rem;
 .field-label.is-flex-grow-2 {
   flex-grow: 2;
 }
+
+@import '~bulma/bulma';

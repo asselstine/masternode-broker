@@ -1,18 +1,12 @@
 .broker-navbar {
-  background: linear-gradient(#D8D8D8, #EEEEEE);
+  /* background: linear-gradient(#26596B, #3d7a90); */
+  background: linear-gradient(#117a70, #23a094);
 }
 
 .broker-navbar .navbar-item {
-  color: #777777;
+  /* color: #777777; */
 }
 
 .broker-navbar a.navbar-item {
   padding: 1.25rem 2rem;
-}
-
-.broker-navbar a.navbar-item.is-active:not(:hover),
-.broker-navbar a.navbar-item.is-active,
-.broker-navbar a.navbar-item:hover {
-  color: #2F6690;
-  background-color: white;
 }
