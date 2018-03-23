@@ -26,7 +26,7 @@ export default class extends Component {
               <span className='level-item cd-label is-inline-block'>Assets</span>
               {buttons.map((name, index) => {
                 return (
-                  <button key={name} className={classnames('level-item button is-rust is-rounded is-inline-block', { 'is-inverted': index !== 0 })}>{name}</button>
+                  <button key={name} className={classnames('level-item button is-primary is-rounded is-inline-block', { 'is-outlined': index !== 0 })}>{name}</button>
                 )
               })}
             </div>

@@ -232,7 +232,7 @@ export default class extends Component {
                       <input className="input" type="number" onChange={(e) => this.setState({assetUnits: e.target.value})} value={this.state.assetUnits} />
                     </div>
                   </div>
-                  <input type='submit' className='button is-rounded is-rust nai-panel__content__confirm' value='Begin Transaction' />
+                  <input type='submit' className='button is-rounded is-primary nai-panel__content__confirm' value='Begin Transaction' />
                 </form>
               </Panel>
             </div>

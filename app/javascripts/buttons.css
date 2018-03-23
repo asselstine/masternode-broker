@@ -1,7 +1,7 @@
 .button {
   transition: 0.1s;
 }
-
+/*
 .button.is-rust {
   background-color: #F45D45;
   border-color: transparent;
@@ -29,4 +29,4 @@
   background-color: #F45D45;
   border-color: transparent;
   color: #fff;
-}
+} */

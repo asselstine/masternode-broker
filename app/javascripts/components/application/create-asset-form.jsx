@@ -157,7 +157,7 @@ export default () => {
                 <div className="field-body">
                   <div className="field">
                     <div className="control">
-                      <Link to='/assets/confirm' className="button is-rust">
+                      <Link to='/assets/confirm' className="button is-primary">
                         Next
                       </Link>
                     </div>

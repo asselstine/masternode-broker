@@ -1,7 +1,8 @@
 @import 'colours';
 
 $text: $colour-dark;
-$primary: #F45D45;
+$primary: $colour-teal;
+// $primary: #F45D45;
 $link: $colour-teal;
 
 $navbar-background-color: $colour-blue;

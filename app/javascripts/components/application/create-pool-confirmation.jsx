@@ -98,7 +98,7 @@ export default class extends Component {
                 </div>
 
                 <div className='has-text-centered'>
-                  <a onClick={(e) => this.setState({modalOpen: true})} className='button is-rust'>Confirm</a>
+                  <a onClick={(e) => this.setState({modalOpen: true})} className='button is-primary'>Confirm</a>
                 </div>
 
                 <Modal isOpen={this.state.modalOpen} onClose={(e) => this.setState({modalOpen: false})}>
@@ -130,7 +130,7 @@ export default class extends Component {
                     </div>
 
                     <div className='has-text-centered'>
-                      <Link to='/pools/pna456/success' className='button is-rust'>Execute</Link>
+                      <Link to='/pools/pna456/success' className='button is-primary'>Execute</Link>
                     </div>
                   </form>
                 </Modal>

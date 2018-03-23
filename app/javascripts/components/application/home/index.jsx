@@ -10,7 +10,7 @@ export default () => {
     labels: ["Masternodes", "POS Assets", "Bitcoin", "Cash"],
     datasets: [
       {
-        backgroundColor: ['#FF715B', '#39BFC9', '#2F6690', '#CCA43B'],
+        backgroundColor: ['#a0d6bb', '#37a18d', '#117a70', '#27596b'],
         data: [14432000, 29608100, 476905, 2523095]
       }
     ]
