@@ -23,48 +23,48 @@ function createAsset(id) {
 export default () => {
 
   var assets = [
-    ['PNAI456',
-    'MN',
-    'Online',
-    'NodeAIMN',
+    ['P101',
+    'NodeAIMNOne',
+    'Active',
     'Accumulation',
-    'Allocated'],
-    ['PNAI457',
-    'POS',
-    'Online',
-    '2134 Capital Corp.',
+    'NodeAI',
+    '$2,300,103'],
+    ['P102',
+    'NodeAIPOSHigh',
+    'Active',
     'Accumulation',
-    'Allocated'],
-    ['PNAI458',
-    'MN',
-    'Online',
-    'PolyNode Capital',
-    'Accumulation',
-    'Allocated'],
-    ['PNAI459',
-    'MN',
-    'Online',
-    'Phoenix Brokers',
-    'Accumulation',
-    'Allocated'],
-    ['PNAI460',
-    'POS',
-    'Online',
-    'Phoenix Brokers',
+    'NodeAI',
+    '$1,385,212'],
+    ['P103',
+    'NodeAIDashMN',
+    'Active',
     'Cashflow',
-    'Allocated'],
-    ['PNAI461',
-    'MN',
-    'Pending',
-    'Phoenix Brokers',
+    'NodeAI',
+    '$12,310,222'],
+    ['P104',
+    'NodeAIEthPOS',
+    'Inactive',
+    'Accumulation',
+    'NodeAI',
+    '-'],
+    ['P105',
+    'PolyNodeMN',
+    'Active',
     'Cashflow',
-    'Allocated'],
-    ['PNAI462',
-    'POS',
-    'Offline',
-    'Unassigned',
+    'PolyNode',
+    '$22,340,300'],
+    ['P106',
+    'PhoenixBrokersPOS',
+    'Active',
     'Cashflow',
-    'Unallocated']
+    'PhoenixBrokers',
+    '$1,400,100'],
+    ['P107',
+    '8313 Capital Corp.',
+    'Active',
+    'Accumulation',
+    'NodeAI',
+    '$8,000,834']
   ]
 
   return (
@@ -135,19 +135,19 @@ export default () => {
                 <SortButton title='ID' />
               </th>
               <th>
-                <SortButton title='Class' />
+                <SortButton title='Name' />
               </th>
               <th>
                 <SortButton title='Status' />
               </th>
               <th>
-                <SortButton title='Assignment'/>
-              </th>
-              <th>
                 <SortButton title='Mode' />
               </th>
               <th>
-                <SortButton title='Allocated'/>
+                <SortButton title='Administrator' />
+              </th>
+              <th>
+                <SortButton title='Value'/>
               </th>
             </tr>
           </thead>
