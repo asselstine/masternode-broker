@@ -13,7 +13,7 @@ export default () => {
           <div className='column is-two-thirds-desktop is-three-fifths-widescreen is-one-half-fullhd'>
             <h1>Transaction Executed <FontAwesome name='check-circle' className='create-asset-success__icon' /></h1>
             <div className='box'>
-              <h2 className='subtitle'>Pool <Link to='/pool-details'>NA123</Link> was successfully created</h2>
+              <h2 className='subtitle'>Pool <Link to='/pool-details'>P108</Link> was successfully created</h2>
               <h2 className='subtitle'>Transaction ID: s4J342aSD</h2>
             </div>
           </div>
