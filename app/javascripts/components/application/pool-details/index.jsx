@@ -6,6 +6,7 @@ import classnames from 'classnames'
 import LineChart from '@/components/line-chart'
 import style from './style'
 import FontAwesome from 'react-fontawesome'
+import PoolAssetsTable from '@/components/pool-assets-table'
 
 export default class extends Component {
   render () {
@@ -163,47 +164,7 @@ export default class extends Component {
               <h1 className='no-margin'>
                 Assets
               </h1>
-              <table className='table nai-table is-striped is-fullwidth'>
-                <thead>
-                  <tr>
-                    <th>AssetID</th>
-                    <th>Class</th>
-                    <th>Status</th>
-                    <th>Mode</th>
-                    <th>Value</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>NA123</td>
-                    <td>MN</td>
-                    <td>Online</td>
-                    <td>Accumulation</td>
-                    <td>$555,321</td>
-                  </tr>
-                  <tr>
-                    <td>NA248</td>
-                    <td>MN</td>
-                    <td>Online</td>
-                    <td>Accumulation</td>
-                    <td>$15,005</td>
-                  </tr>
-                  <tr>
-                    <td>NA749</td>
-                    <td>MN</td>
-                    <td>Pending</td>
-                    <td>Accumulation</td>
-                    <td>$123,031</td>
-                  </tr>
-                  <tr>
-                    <td>NA545</td>
-                    <td>MN</td>
-                    <td>Online</td>
-                    <td>Accumulation</td>
-                    <td>$1,606,746</td>
-                  </tr>
-                </tbody>
-              </table>
+              <PoolAssetsTable />
             </div>
           </div>
         </div>

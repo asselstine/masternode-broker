@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 
 import { Modal } from '@/components/modal'
 import SelectAsset from '@/components/select-asset'
+import PoolAssetsTable from '@/components/pool-assets-table'
 
 export default class extends Component {
   constructor (props) {
@@ -82,6 +83,8 @@ export default class extends Component {
                     </tr>
                   </tbody>
                 </table>
+
+                <PoolAssetsTable />
 
                 <div className="notification is-warning">
                   <div className='has-text-centered'>You will need to enter your 2FA code to complete the transaction</div>

@@ -2,9 +2,8 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import FontAwesome from 'react-fontawesome'
 
-import SortButton from '@/components/sort-button'
-import HField from '@/components/bulma/h-field'
 import style from './style'
+import AssetsTable from '@/components/assets-table'
 
 function oneOf(array) {
   return array[parseInt(Math.random() * array.length)]
@@ -21,52 +20,6 @@ function createAsset(id) {
 }
 
 export default () => {
-
-  var assets = [
-    ['NA123',
-    'MN',
-    'Online',
-    'NodeAIMN',
-    'Accumulation',
-    'Allocated'],
-    ['NA245',
-    'POS',
-    'Online',
-    '2134 Capital Corp.',
-    'Accumulation',
-    'Allocated'],
-    ['NA246',
-    'MN',
-    'Online',
-    'PolyNode Capital',
-    'Accumulation',
-    'Allocated'],
-    ['NA746',
-    'MN',
-    'Online',
-    'Phoenix Brokers',
-    'Accumulation',
-    'Allocated'],
-    ['NA127',
-    'POS',
-    'Online',
-    'Phoenix Brokers',
-    'Cashflow',
-    'Allocated'],
-    ['NA543',
-    'MN',
-    'Pending',
-    'Phoenix Brokers',
-    'Cashflow',
-    'Allocated'],
-    ['NA236',
-    'POS',
-    'Offline',
-    'Unassigned',
-    'Cashflow',
-    'Unallocated']
-  ]
-
   return (
     <section className='section'>
       <div className='container is-fluid'>
@@ -127,58 +80,7 @@ export default () => {
           </div>
         </form>
 
-        <table className='table nai-table is-fullwidth is-striped'>
-
-          <thead>
-            <tr>
-              <th>
-                <SortButton title='ID' />
-              </th>
-              <th>
-                <SortButton title='Class' />
-              </th>
-              <th>
-                <SortButton title='Status' />
-              </th>
-              <th>
-                <SortButton title='Assignment'/>
-              </th>
-              <th>
-                <SortButton title='Mode' />
-              </th>
-              <th>
-                <SortButton title='Allocated'/>
-              </th>
-            </tr>
-          </thead>
-
-          <tbody>
-            {assets.map((asset) => {
-              return (
-                <tr key={asset[0]}>
-                  <td>
-                    <NavLink to='/asset-details'>{asset[0]}</NavLink>
-                  </td>
-                  <td>
-                    {asset[1]}
-                  </td>
-                  <td>
-                    {asset[2]}
-                  </td>
-                  <td>
-                    {asset[3]}
-                  </td>
-                  <td>
-                    {asset[4]}
-                  </td>
-                  <td>
-                    {asset[5]}
-                  </td>
-                </tr>
-              )
-            })}
-          </tbody>
-        </table>
+        <AssetsTable />
       </div>
     </section>
   )
