@@ -1,0 +1,16 @@
+.notification-label {
+  color: white;
+  border: 1px solid white;
+  box-shadow: 0 0 6px black;
+  background-color: #AC302D;
+  border-radius: 50%;
+  width: 1.5em;
+  height: 1.5em;
+  text-align: center;
+  line-height: 1.3em;
+  font-weight: bold;
+  font-size: 0.7em;
+  margin-left: -0.7em;
+  position: relative;
+  top: -0.7em;
+}

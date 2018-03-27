@@ -1,0 +1,54 @@
+@import '../../../colours';
+
+.navbar.is-general {
+  background: linear-gradient(#2D2D2A, #000000);
+}
+
+.is-general__logo {
+  max-width: 2rem;
+  max-height: 2rem;
+}
+
+.is-general a.navbar-item.is-active:not(:hover),
+.is-general a.navbar-link.is-active:not(:hover) {
+  background-color: transparent;
+}
+
+.is-general a.navbar-item:hover,
+.is-general a.navbar-link:hover {
+  background-color: transparent;
+}
+
+.is-general a.navbar-item.is-active,
+.is-general a.navbar-link.is-active {
+  background-color: transparent;
+}
+
+.is-general .navbar-item {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.is-general a.navbar-item {
+  position: relative;
+}
+
+.is-general a.navbar-burger:hover {
+  color: $colour-teal;
+}
+
+@media screen and (min-width: 1024px) {
+  .is-general a.navbar-item.is-active::after {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    height: 0;
+    width: 0;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid white;
+    border-left: 8px solid transparent;
+    content: '\a0';
+    margin-right: -8px;
+  }
+}

@@ -10,16 +10,6 @@ export default ({children}) => {
         <div className='navbar-start'>
           {children}
         </div>
-        <div className='navbar-end'>
-          <div className='navbar-item'>
-            <div className="control has-icons-right">
-              <input className="input" type="search" placeholder="Search" />
-              <span className="icon is-small is-right">
-                <FontAwesome name='search' />
-              </span>
-            </div>
-          </div>
-        </div>
       </div>
     </nav>
   )

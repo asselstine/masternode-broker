@@ -1,5 +1,6 @@
 import React from 'react'
 import {
+  BrowserRouter,
   Route,
   Redirect,
   Switch
@@ -25,130 +26,165 @@ import PoolDetails from './pool-details'
 import Pools from './pools'
 import Assets from './assets'
 import Home from './home'
+import GeneralNavcol from './general-navcol'
+import GeneralNavbar from './general-navbar'
 
 export const Application = () => {
   return (
-      <Switch>
-        <Route path='/pools/pna456/success'>
-          <div className='app-container min-height-100'>
-            <PoolNavcol />
-            <div className='app-container__content'>
-              <UserNav />
-              <ManagerNavbar />
+    <BrowserRouter>
+      <div className='app-container min-height-100'>
+        <GeneralNavbar />
+        <div className='app-container__content'>
+          <Switch>
+            <Route path='/pools/pna456/success'>
               <CreatePoolSuccess />
-            </div>
-          </div>
-        </Route>
-
-        <Route path='/pool-details'>
-          <div className='app-container min-height-100'>
-            <PoolNavcol />
-            <div className='app-container__content'>
-              <UserNav />
-              <ManagerNavbar />
+            </Route>
+            <Route path='/pool-details'>
               <PoolDetails />
-            </div>
-          </div>
-        </Route>
-
-        <Route path='/pools/new'>
-          <div className='app-container min-height-100'>
-            <PoolNavcol />
-            <div className='app-container__content'>
-              <UserNav />
-              <ManagerNavbar />
+            </Route>
+            <Route path='/pools/new'>
               <CreatePoolForm />
-            </div>
-          </div>
-        </Route>
-
-        <Route path='/pools/confirm'>
-          <div className='app-container min-height-100'>
-            <PoolNavcol />
-            <div className='app-container__content'>
-              <UserNav />
-              <ManagerNavbar />
+            </Route>
+            <Route path='/pools/confirm'>
               <CreatePoolConfirmation />
-            </div>
-          </div>
-        </Route>
-
-        <Route path='/pools'>
-          <div className='app-container min-height-100'>
-            <PoolNavcol />
-            <div className='app-container__content'>
-              <UserNav />
-              <ManagerNavbar />
+            </Route>
+            <Route path='/pools'>
               <Pools />
-            </div>
-          </div>
-        </Route>
-
-        <Route path='/assets/new'>
-          <div className='app-container min-height-100'>
-            <AssetNavcol />
-            <div className='app-container__content'>
-              <UserNav />
-              <ManagerNavbar />
+            </Route>
+            <Route path='/assets/new'>
               <CreateAssetForm />
-            </div>
-          </div>
-        </Route>
-
-        <Route path='/assets/confirm'>
-          <div className='app-container min-height-100'>
-            <AssetNavcol />
-            <div className='app-container__content'>
-              <UserNav />
-              <ManagerNavbar />
+            </Route>
+            <Route path='/assets/confirm'>
               <CreateAssetConfirmation />
-            </div>
-          </div>
-        </Route>
-
-        <Route path='/assets/na123/success'>
-          <div className='app-container min-height-100'>
-            <AssetNavcol />
-            <div className='app-container__content'>
-              <UserNav />
-              <ManagerNavbar />
+            </Route>
+            <Route path='/assets/na123/success'>
               <CreateAssetSuccess />
-            </div>
-          </div>
-        </Route>
-
-        <Route path='/assets'>
-          <div className='app-container min-height-100'>
-            <AssetNavcol />
-            <div className='app-container__content'>
-              <UserNav />
-              <ManagerNavbar />
+            </Route>
+            <Route path='/assets'>
               <Assets />
-            </div>
-          </div>
-        </Route>
-
-        <Route path='/asset-details'>
-          <div className='app-container min-height-100'>
-            <AssetNavcol />
-            <div className='app-container__content'>
-              <UserNav />
-              <ManagerNavbar />
+            </Route>
+            <Route path='/asset-details'>
               <AssetDetails />
-            </div>
-          </div>
-        </Route>
-
-        <Route path='/'>
-          <div className='app-container min-height-100'>
-            <ManagerNavcol className='app__navcol' />
-            <div className='app-container__content'>
-              <UserNav />
-              <ManagerNavbar />
+            </Route>
+            <Route path='/'>
               <Home />
-            </div>
-          </div>
-        </Route>
-      </Switch>
+            </Route>
+          </Switch>
+        </div>
+      </div>
+    </BrowserRouter>
   )
+    /*
+
+            <Route path='/pool-details'>
+              <div className='app-container min-height-100'>
+                <PoolNavcol />
+                <div className='app-container__content'>
+                  <UserNav />
+                  <ManagerNavbar />
+                  <PoolDetails />
+                </div>
+              </div>
+            </Route>
+
+            <Route path='/pools/new'>
+              <div className='app-container min-height-100'>
+                <PoolNavcol />
+                <div className='app-container__content'>
+                  <UserNav />
+                  <ManagerNavbar />
+                  <CreatePoolForm />
+                </div>
+              </div>
+            </Route>
+
+            <Route path='/pools/confirm'>
+              <div className='app-container min-height-100'>
+                <PoolNavcol />
+                <div className='app-container__content'>
+                  <UserNav />
+                  <ManagerNavbar />
+                  <CreatePoolConfirmation />
+                </div>
+              </div>
+            </Route>
+
+            <Route path='/pools'>
+              <div className='app-container min-height-100'>
+                <PoolNavcol />
+                <div className='app-container__content'>
+                  <UserNav />
+                  <ManagerNavbar />
+                  <Pools />
+                </div>
+              </div>
+            </Route>
+
+            <Route path='/assets/new'>
+              <div className='app-container min-height-100'>
+                <AssetNavcol />
+                <div className='app-container__content'>
+                  <UserNav />
+                  <ManagerNavbar />
+                  <CreateAssetForm />
+                </div>
+              </div>
+            </Route>
+
+            <Route path='/assets/confirm'>
+              <div className='app-container min-height-100'>
+                <AssetNavcol />
+                <div className='app-container__content'>
+                  <UserNav />
+                  <ManagerNavbar />
+                  <CreateAssetConfirmation />
+                </div>
+              </div>
+            </Route>
+
+            <Route path='/assets/na123/success'>
+              <div className='app-container min-height-100'>
+                <AssetNavcol />
+                <div className='app-container__content'>
+                  <UserNav />
+                  <ManagerNavbar />
+                  <CreateAssetSuccess />
+                </div>
+              </div>
+            </Route>
+
+            <Route path='/assets'>
+              <div className='app-container min-height-100'>
+                <AssetNavcol />
+                <div className='app-container__content'>
+                  <UserNav />
+                  <ManagerNavbar />
+                  <Assets />
+                </div>
+              </div>
+            </Route>
+
+            <Route path='/asset-details'>
+              <div className='app-container min-height-100'>
+                <AssetNavcol />
+                <div className='app-container__content'>
+                  <UserNav />
+                  <ManagerNavbar />
+                  <AssetDetails />
+                </div>
+              </div>
+            </Route>
+
+            <Route path='/'>
+              <div className='app-container min-height-100'>
+                <ManagerNavcol className='app__navcol' />
+                <div className='app-container__content'>
+                  <UserNav />
+                  <ManagerNavbar />
+                  <Home />
+                </div>
+              </div>
+            </Route>
+          </Switch>
+          */
 }

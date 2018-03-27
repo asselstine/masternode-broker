@@ -1,5 +1,6 @@
 @import 'colours';
 
+$family-primary: 'Open Sans', BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $text: $colour-dark;
 $primary: $colour-teal;
 // $primary: #F45D45;
@@ -7,7 +8,7 @@ $link: $colour-teal;
 
 $navbar-background-color: $colour-blue;
 $navbar-item-color: $colour-grey;
-$navbar-item-hover-color: $colour-blue;
+$navbar-item-hover-color: $colour-teal;
 $navbar-item-active-color: $colour-teal;
 $navbar-item-active-background-color: white;
 $navbar-item-hover-background-color: white;
