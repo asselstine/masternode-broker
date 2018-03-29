@@ -24,66 +24,68 @@ export default class extends Component {
               <h1>Confirm Create Pool</h1>
 
               <div className='box'>
-                <table className='table nai-table is-striped is-fullwidth'>
-                  <thead>
-                    <tr>
-                      <th></th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <span className='assets__table__label'>ID</span>
-                      </td>
-                      <td className='assets__table__value'>
-                        P101
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span className='assets__table__label'>Name</span>
-                      </td>
-                      <td className='assets__table__value'>
-                        NodeAI Masternode One
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span className='assets__table__label'>Status</span>
-                      </td>
-                      <td className='assets__table__value'>
-                        Active
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span className='assets__table__label'>Mode</span>
-                      </td>
-                      <td className='assets__table__value'>
-                        Accumulation
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span className='assets__table__label'>Administrator</span>
-                      </td>
-                      <td className='assets__table__value'>
-                        NodeAI
-                      </td>
-                    </tr>
+                <div className='table-h-scroll'>
+                  <table className='table nai-table is-striped is-fullwidth'>
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <span className='assets__table__label'>ID</span>
+                        </td>
+                        <td className='assets__table__value'>
+                          P101
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span className='assets__table__label'>Name</span>
+                        </td>
+                        <td className='assets__table__value'>
+                          NodeAI Masternode One
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span className='assets__table__label'>Status</span>
+                        </td>
+                        <td className='assets__table__value'>
+                          Active
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span className='assets__table__label'>Mode</span>
+                        </td>
+                        <td className='assets__table__value'>
+                          Accumulation
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span className='assets__table__label'>Administrator</span>
+                        </td>
+                        <td className='assets__table__value'>
+                          NodeAI
+                        </td>
+                      </tr>
 
-                    <tr>
-                      <td>
-                        <span className='assets__table__label'>Value</span>
-                      </td>
-                      <td className='assets__table__value'>
-                        $23,451,200
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-
+                      <tr>
+                        <td>
+                          <span className='assets__table__label'>Value</span>
+                        </td>
+                        <td className='assets__table__value'>
+                          $23,451,200
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                
                 <PoolAssetsTable />
 
                 <div className="notification is-warning">

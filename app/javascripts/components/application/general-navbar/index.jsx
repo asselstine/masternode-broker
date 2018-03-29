@@ -66,7 +66,7 @@ export default withRouter(class extends Component {
               </a>
             </div>
             <div className='navbar-item'>
-              <a>
+              <a className='navbar__notifications'>
                 <FontAwesome name='bell' />
                 <NotificationLabel count={3} />
               </a>

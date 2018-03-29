@@ -154,65 +154,69 @@ export default class extends Component {
           <h1>
             Existing Holdings
           </h1>
-          <table className='nai-table table is-fullwidth is-striped'>
-            <thead>
-              <tr>
-                <th className='actions'></th>
-                <th>Asset</th>
-                <th>Units</th>
-                <th>Value</th>
-                <th>% Weight</th>
-                <th>YTD PERF.</th>
-              </tr>
-            </thead>
-            <tbody>
-              {holdings.map((holding, index) => {
-                return (
-                  <tr key={index}>
-                    <td className='actions'>
-                      <FaButton />
-                      <FaButton faName='pencil' />
-                    </td>
-                    <td>{holding.asset}</td>
-                    <td>{holding.units}</td>
-                    <td>${holding.value}</td>
-                    <td>{holding.weight}</td>
-                    <td>{holding.ytdPerformance}</td>
-                  </tr>
-                )
-              })}
-            </tbody>
-          </table>
+          <div className='table-h-scroll'>
+            <table className='nai-table table is-fullwidth is-striped'>
+              <thead>
+                <tr>
+                  <th className='actions'></th>
+                  <th>Asset</th>
+                  <th>Units</th>
+                  <th>Value</th>
+                  <th>% Weight</th>
+                  <th>YTD PERF.</th>
+                </tr>
+              </thead>
+              <tbody>
+                {holdings.map((holding, index) => {
+                  return (
+                    <tr key={index}>
+                      <td className='actions'>
+                        <FaButton />
+                        <FaButton faName='pencil' />
+                      </td>
+                      <td>{holding.asset}</td>
+                      <td>{holding.units}</td>
+                      <td>${holding.value}</td>
+                      <td>{holding.weight}</td>
+                      <td>{holding.ytdPerformance}</td>
+                    </tr>
+                  )
+                })}
+              </tbody>
+            </table>
 
-          <div className='columns'>
-            <div className='column is-two-thirds'>
-              <h1>
-                Transactions List
-              </h1>
-              <table className='nai-table table is-fullwidth is-striped'>
-                <thead>
-                  <tr>
-                    <th>Asset</th>
-                    <th>Buy/Sell</th>
-                    <th>Amount</th>
-                    <th>Date</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {transactions.map((transaction, index) => {
-                    return (
-                      <tr key={index}>
-                        <td>{transaction.asset}</td>
-                        <td>{transaction.action}</td>
-                        <td>${transaction.amount}</td>
-                        <td>{transaction.date.toString()}</td>
-                        <td>{transaction.status}</td>
+            <div className='columns'>
+              <div className='column is-two-thirds'>
+                <h1>
+                  Transactions List
+                </h1>
+                <div className='table-h-scroll'>
+                  <table className='nai-table table is-fullwidth is-striped'>
+                    <thead>
+                      <tr>
+                        <th>Asset</th>
+                        <th>Buy/Sell</th>
+                        <th>Amount</th>
+                        <th>Date</th>
+                        <th>Status</th>
                       </tr>
-                    )
-                  })}
-                </tbody>
-              </table>
+                    </thead>
+                    <tbody>
+                      {transactions.map((transaction, index) => {
+                        return (
+                          <tr key={index}>
+                            <td>{transaction.asset}</td>
+                            <td>{transaction.action}</td>
+                            <td>${transaction.amount}</td>
+                            <td>{transaction.date.toString()}</td>
+                            <td>{transaction.status}</td>
+                          </tr>
+                        )
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
             <div className='column'>
               <Panel headingClassName='nai-panel__rust'>

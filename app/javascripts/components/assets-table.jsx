@@ -51,57 +51,58 @@ export default () => {
   ]
 
   return (
-    <table className='table nai-table is-fullwidth is-striped'>
+    <div className='table-h-scroll'>
+      <table className='table nai-table is-fullwidth is-striped'>
+        <thead>
+          <tr>
+            <th>
+              <SortButton title='ID' />
+            </th>
+            <th>
+              <SortButton title='Class' />
+            </th>
+            <th>
+              <SortButton title='Status' />
+            </th>
+            <th>
+              <SortButton title='Assignment'/>
+            </th>
+            <th>
+              <SortButton title='Mode' />
+            </th>
+            <th>
+              <SortButton title='Allocated'/>
+            </th>
+          </tr>
+        </thead>
 
-      <thead>
-        <tr>
-          <th>
-            <SortButton title='ID' />
-          </th>
-          <th>
-            <SortButton title='Class' />
-          </th>
-          <th>
-            <SortButton title='Status' />
-          </th>
-          <th>
-            <SortButton title='Assignment'/>
-          </th>
-          <th>
-            <SortButton title='Mode' />
-          </th>
-          <th>
-            <SortButton title='Allocated'/>
-          </th>
-        </tr>
-      </thead>
-
-      <tbody>
-        {assets.map((asset) => {
-          return (
-            <tr key={asset[0]}>
-              <td>
-                <NavLink to='/asset-details'>{asset[0]}</NavLink>
-              </td>
-              <td>
-                {asset[1]}
-              </td>
-              <td>
-                {asset[2]}
-              </td>
-              <td>
-                {asset[3]}
-              </td>
-              <td>
-                {asset[4]}
-              </td>
-              <td>
-                {asset[5]}
-              </td>
-            </tr>
-          )
-        })}
-      </tbody>
-    </table>
+        <tbody>
+          {assets.map((asset) => {
+            return (
+              <tr key={asset[0]}>
+                <td>
+                  <NavLink to='/asset-details'>{asset[0]}</NavLink>
+                </td>
+                <td>
+                  {asset[1]}
+                </td>
+                <td>
+                  {asset[2]}
+                </td>
+                <td>
+                  {asset[3]}
+                </td>
+                <td>
+                  {asset[4]}
+                </td>
+                <td>
+                  {asset[5]}
+                </td>
+              </tr>
+            )
+          })}
+        </tbody>
+      </table>
+    </div>
   )
 }

@@ -1,7 +1,11 @@
 @import '../../../colours';
 
 .navbar.is-general {
-  background: linear-gradient(#2D2D2A, #000000);
+  background: linear-gradient(#5a5a5a, #000000);
+}
+
+.navbar.is-general a:hover {
+  color: $colour-teal;
 }
 
 .is-general__logo {
@@ -51,4 +55,17 @@
     content: '\a0';
     margin-right: -8px;
   }
+
+  .is-general .navbar-item.has-dropdown:hover .navbar-link,
+  .is-general .navbar-item.has-dropdown.is-active .navbar-link {
+    background-color: transparent;
+  }
+}
+
+.navbar__notifications {
+  font-size: 1.1em;
+}
+
+.navbar__notifications .fa {
+  font-size: 1.3em;
 }

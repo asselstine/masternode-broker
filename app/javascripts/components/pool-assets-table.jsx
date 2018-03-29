@@ -34,29 +34,31 @@ export default ({assets}) => {
   ]
 
   return (
-    <table className='table nai-table is-striped is-fullwidth'>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Class</th>
-          <th>Status</th>
-          <th>Mode</th>
-          <th>Value</th>
-        </tr>
-      </thead>
-      <tbody>
-        {assets.map((asset) => {
-          return (
-            <tr key={asset[0]}>
-              <td>{asset[0]}</td>
-              <td>{asset[1]}</td>
-              <td>{asset[2]}</td>
-              <td>{asset[3]}</td>
-              <td>{asset[4]}</td>
-            </tr>
-          )
-        })}
-      </tbody>
-    </table>
+    <div className='table-h-scroll'>
+      <table className='table nai-table is-striped is-fullwidth'>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Class</th>
+            <th>Status</th>
+            <th>Mode</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          {assets.map((asset) => {
+            return (
+              <tr key={asset[0]}>
+                <td>{asset[0]}</td>
+                <td>{asset[1]}</td>
+                <td>{asset[2]}</td>
+                <td>{asset[3]}</td>
+                <td>{asset[4]}</td>
+              </tr>
+            )
+          })}
+        </tbody>
+      </table>
+    </div>
   )
 }
