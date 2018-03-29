@@ -1,0 +1,27 @@
+@import '../../../colours';
+
+.alerts__item {
+  margin-bottom: 1rem;
+  padding-left: 1.8rem;
+  position: relative;
+}
+
+.alerts__item__icon {
+  position: absolute;
+  top: -0.1em;
+  left: 0;
+  font-size: 2rem;
+  font-weight: bolder;
+  color: $colour-green;
+}
+
+.alerts__item__header {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #27596b;
+}
+
+.alerts__item__timestamp {
+  font-size: 0.8em;
+  color: $colour-dark-grey;
+}

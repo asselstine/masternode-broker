@@ -81,7 +81,7 @@ export default () => {
             return (
               <tr key={asset[0]}>
                 <td>
-                  <NavLink to='/asset-details'>{asset[0]}</NavLink>
+                  <NavLink to='/assets/p101'>{asset[0]}</NavLink>
                 </td>
                 <td>
                   {asset[1]}

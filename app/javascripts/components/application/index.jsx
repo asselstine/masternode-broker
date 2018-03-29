@@ -28,6 +28,7 @@ import Assets from './assets'
 import Home from './home'
 import GeneralNavcol from './general-navcol'
 import GeneralNavbar from './general-navbar'
+import Alerts from './alerts'
 
 export const Application = () => {
   return (
@@ -60,11 +61,14 @@ export const Application = () => {
             <Route path='/assets/na123/success'>
               <CreateAssetSuccess />
             </Route>
+            <Route path='/assets/p101'>
+              <AssetDetails />
+            </Route>
             <Route path='/assets'>
               <Assets />
             </Route>
-            <Route path='/asset-details'>
-              <AssetDetails />
+            <Route path='/alerts'>
+              <Alerts />
             </Route>
             <Route path='/'>
               <Home />
@@ -164,7 +168,7 @@ export const Application = () => {
               </div>
             </Route>
 
-            <Route path='/asset-details'>
+            <Route path='/assets/p101'>
               <div className='app-container min-height-100'>
                 <AssetNavcol />
                 <div className='app-container__content'>

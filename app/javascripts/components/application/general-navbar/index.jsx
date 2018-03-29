@@ -59,10 +59,10 @@ export default withRouter(class extends Component {
                 </a>
               </div>
               <div className='navbar-item'>
-                <a className='navbar__notifications'>
+                <NavLink className="navbar__notifications" to='/alerts' activeClassName='is-active'>
                   <FontAwesome name='bell' />
                   <NotificationLabel count={3} />
-                </a>
+                </NavLink>
               </div>
               <div className='navbar-item'>
                 <div className="control has-icons-right">

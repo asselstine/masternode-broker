@@ -8,7 +8,7 @@
   color: white;
 }
 
-.navbar.is-general a {
+.is-general a {
   color: $colour-grey;
 }
 
@@ -79,4 +79,8 @@
 
 .navbar__notifications .fa {
   font-size: 1.3em;
+}
+
+.navbar__notifications.is-active {
+  color: white;
 }
