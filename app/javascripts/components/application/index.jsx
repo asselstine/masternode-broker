@@ -40,7 +40,7 @@ export const Application = () => {
             <Route path='/pools/pna456/success'>
               <CreatePoolSuccess />
             </Route>
-            <Route path='/pool-details'>
+            <Route path='/pools/P101'>
               <PoolDetails />
             </Route>
             <Route path='/pools/new'>
@@ -80,7 +80,7 @@ export const Application = () => {
   )
     /*
 
-            <Route path='/pool-details'>
+            <Route path='/pools/P101'>
               <div className='app-container min-height-100'>
                 <PoolNavcol />
                 <div className='app-container__content'>

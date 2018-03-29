@@ -1,3 +1,7 @@
 .assets__filters {
   padding-bottom: 1rem;
 }
+
+.is-flex-1 {
+  flex: 1;
+}

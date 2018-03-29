@@ -76,48 +76,44 @@ export default () => {
           <div className='level'>
             <div className='level-left'>
               <div className='level-item'>
-                <div className="control has-icons-right">
-                  <input className="input" type="search" placeholder="ID" />
-                  <span className="icon is-small is-right">
-                    <FontAwesome name='search' />
-                  </span>
-                </div>
-              </div>
-              <div className='level-item'>
-                <div className='field'>
-                  <div className='select'>
-                    <select>
-                      <option>Any status</option>
-                      <option>Online</option>
-                      <option>Offline</option>
-                      <option>Pending</option>
-                    </select>
+                <div className='field is-flex-1'>
+                  <div className="control has-icons-right is-expanded">
+                    <input className="input" type="search" placeholder="ID" />
+                    <span className="icon is-small is-right">
+                      <FontAwesome name='search' />
+                    </span>
                   </div>
                 </div>
               </div>
               <div className='level-item'>
-                <div className='field'>
-                  <div className='select'>
-                    <select>
-                      <option>Any Assignment</option>
-                      <option>Unassigned</option>
-                      <option>Assigned</option>
-                    </select>
-                  </div>
+                <div className='select is-fullwidth'>
+                  <select>
+                    <option>Any status</option>
+                    <option>Online</option>
+                    <option>Offline</option>
+                    <option>Pending</option>
+                  </select>
                 </div>
               </div>
               <div className='level-item'>
-                <div className='field'>
-                  <div className='select'>
-                    <select>
-                      <option>Any mode</option>
-                      <option>Default</option>
-                      <option>Accumulation</option>
-                      <option>Cashflow</option>
-                      <option>Trading:arbitrage</option>
-                      <option>Trading:ai</option>
-                    </select>
-                  </div>
+                <div className='select is-fullwidth'>
+                  <select>
+                    <option>Any Assignment</option>
+                    <option>Unassigned</option>
+                    <option>Assigned</option>
+                  </select>
+                </div>
+              </div>
+              <div className='level-item'>
+                <div className='select is-fullwidth'>
+                  <select>
+                    <option>Any mode</option>
+                    <option>Default</option>
+                    <option>Accumulation</option>
+                    <option>Cashflow</option>
+                    <option>Trading:arbitrage</option>
+                    <option>Trading:ai</option>
+                  </select>
                 </div>
               </div>
               <div className='level-item'>
@@ -157,7 +153,7 @@ export default () => {
                 return (
                   <tr key={asset[0]}>
                     <td>
-                      <NavLink to='/pool-details'>{asset[0]}</NavLink>
+                      <NavLink to='/pools/P101'>{asset[0]}</NavLink>
                     </td>
                     <td>
                       {asset[1]}
