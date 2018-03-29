@@ -52,17 +52,9 @@ export default withRouter(class extends Component {
             <NavLink className='navbar-item' to='/transactions' activeClassName='is-active'>Transactions</NavLink>
           </div>
           <div className='navbar-end'>
-            <div className='navbar-item'>
-              <div className="control has-icons-right">
-                <input className="input" type="search" placeholder="Search" />
-                <span className="icon is-small is-right">
-                  <FontAwesome name='search' />
-                </span>
-              </div>
-            </div>
             <div className='navbar-item has-dropdown'>
-              <a className="navbar-link has-text-right">
-                <span className='is-uppercase has-text-weight-semibold is-size-7'>User Account</span>
+              <a className="navbar-link">
+                <span className='is-uppercase has-text-weight-semibold'>User Account</span>
               </a>
             </div>
             <div className='navbar-item'>
@@ -70,6 +62,14 @@ export default withRouter(class extends Component {
                 <FontAwesome name='bell' />
                 <NotificationLabel count={3} />
               </a>
+            </div>
+            <div className='navbar-item'>
+              <div className="control has-icons-right">
+                <input className="input" type="search" placeholder="Search" />
+                <span className="icon is-small is-right">
+                  <FontAwesome name='search' />
+                </span>
+              </div>
             </div>
           </div>
         </div>

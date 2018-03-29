@@ -5,12 +5,23 @@
 }
 
 .navbar.is-general a:hover {
-  color: $colour-teal;
+  color: white;
+}
+
+.navbar.is-general a {
+  color: $colour-grey;
 }
 
 .is-general__logo {
   max-width: 2rem;
   max-height: 2rem;
+}
+
+@media screen and (max-width: 1023px) {
+  .is-general .navbar-menu {
+    background-color: inherit;
+  }
+
 }
 
 .is-general a.navbar-item.is-active:not(:hover),
