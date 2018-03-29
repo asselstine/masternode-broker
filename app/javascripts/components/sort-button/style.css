@@ -1,3 +1,9 @@
 .sort-button {
   color: black;
 }
+
+.sort-button__icon {
+  float: right;
+  font-size: 1.3em;
+  margin-top: 0.2em;
+}

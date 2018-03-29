@@ -1,6 +1,21 @@
 .button {
   transition: 0.1s;
 }
+
+.button.is-tiny {
+  font-size: 0.6rem;
+}
+
+.is-header {
+  position: absolute;
+  bottom: 0.9em;
+  margin-left: 1em;
+}
+
+.is-relative {
+  position: relative;
+}
+
 /*
 .button.is-rust {
   background-color: #F45D45;

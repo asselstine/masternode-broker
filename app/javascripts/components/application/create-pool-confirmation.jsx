@@ -85,50 +85,43 @@ export default class extends Component {
                     </tbody>
                   </table>
                 </div>
-                
+
                 <PoolAssetsTable />
 
                 <div className="notification is-warning">
                   <div className='has-text-centered'>You will need to enter your 2FA code to complete the transaction</div>
                 </div>
 
-                <div className='has-text-centered'>
-                  <a onClick={(e) => this.setState({modalOpen: true})} className='button is-primary'>Confirm</a>
-                </div>
-
-                <Modal isOpen={this.state.modalOpen} onClose={(e) => this.setState({modalOpen: false})}>
-                  <form className='box'>
-                    <h1>Authenticate</h1>
-                    <div className='field is-horizontal'>
-                      <div className='field-label is-normal is-flex-grow-2'>
-                        <label className='label'>Password</label>
-                      </div>
-                      <div className='field-body'>
-                        <div className='field'>
-                          <div className='control'>
-                            <input type='password' className='input' />
-                          </div>
+                <form>
+                  <div className='field is-horizontal'>
+                    <div className='field-label is-normal is-flex-grow-2'>
+                      <label className='label'>Password</label>
+                    </div>
+                    <div className='field-body'>
+                      <div className='field'>
+                        <div className='control'>
+                          <input type='password' className='input' />
                         </div>
                       </div>
                     </div>
-                    <div className='field is-horizontal'>
-                      <div className='field-label is-normal is-flex-grow-2'>
-                        <label className='label'>2-Factor Code</label>
-                      </div>
-                      <div className='field-body'>
-                        <div className='field'>
-                          <div className='control'>
-                            <input type='text' className='input' />
-                          </div>
+                  </div>
+                  <div className='field is-horizontal'>
+                    <div className='field-label is-normal is-flex-grow-2'>
+                      <label className='label'>2-Factor Code</label>
+                    </div>
+                    <div className='field-body'>
+                      <div className='field'>
+                        <div className='control'>
+                          <input type='text' className='input' />
                         </div>
                       </div>
                     </div>
+                  </div>
 
-                    <div className='has-text-centered'>
-                      <Link to='/pools/pna456/success' className='button is-primary'>Execute</Link>
-                    </div>
-                  </form>
-                </Modal>
+                  <div className='has-text-centered'>
+                    <Link to='/pools/pna456/success' className='button is-primary'>Execute</Link>
+                  </div>
+                </form>
               </div>
             </div>
           </div>

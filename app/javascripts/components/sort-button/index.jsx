@@ -40,9 +40,9 @@ class SortButton extends Component {
       var title = this.props.title + ' '
     }
     return (
-      <a onClick={this.onClick} className='sort-button is-inline-block'>
+      <a onClick={this.onClick} className='sort-button is-block'>
         {title}
-        <FontAwesome name={name} />
+        <FontAwesome name={name} className='sort-button__icon' />
       </a>
     )
   }

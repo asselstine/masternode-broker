@@ -1,14 +1,14 @@
 @import '../../../colours';
 
-.asset-subnav {
+.subnav {
   border-bottom: 1px solid $colour-grey;
 }
 
-.asset-subnav__item {
+.subnav__item {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
 
-.asset-subnav__item + .asset-subnav__item {
+.subnav__item + .subnav__item {
   margin-left: 1em;
 }

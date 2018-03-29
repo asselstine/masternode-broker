@@ -3,10 +3,19 @@
   overflow: scroll;
 }
 
+.nai-table.table thead tr.is-grey {
+  // background-color: #eee;
+}
+
 .nai-table.table thead th,
 .nai-table.table thead td {
-  border-color: black;
+  border: none;
   padding: 0.5rem 0.75rem;
+}
+
+.nai-table.table tbody tr:first-child {
+  margin-top: 1px;
+  border-top: 1px solid black;
 }
 
 .nai-table.table tbody th,

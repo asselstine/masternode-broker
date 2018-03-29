@@ -2,6 +2,7 @@ import React, {
   Component
 } from 'react'
 import classnames from 'classnames'
+import { NavLink } from 'react-router-dom'
 
 import LineChart from '@/components/line-chart'
 import style from './style'
@@ -11,31 +12,11 @@ import AssetSubnav from '../asset-subnav'
 
 export default class extends Component {
   render () {
-    var buttons = [
-      'NA123',
-      'NA245',
-      'NA246',
-      'NA746',
-      'NA127',
-      'NA543'
-    ]
-
     return (
       <div>
         <AssetSubnav />
         <section className='section'>
           <div className='container is-not-fluid'>
-            <div className='level'>
-              <div className='level-left'>
-                <span className='level-item cd-label is-inline-block'>Assets</span>
-                {buttons.map((name, index) => {
-                  return (
-                    <button key={name} className={classnames('level-item button is-primary is-rounded is-inline-block', { 'is-outlined': index !== 0 })}>{name}</button>
-                  )
-                })}
-              </div>
-            </div>
-
             <div className='columns'>
               <div className='column is-two-fifths'>
                 <h1 className='no-margin'>
@@ -45,7 +26,7 @@ export default class extends Component {
                 <table className='table nai-table is-striped is-fullwidth'>
                   <thead>
                     <tr>
-                      <th></th>
+                      <th>&nbsp;</th>
                       <th></th>
                     </tr>
                   </thead>
@@ -125,7 +106,7 @@ export default class extends Component {
                   <table className='table nai-table is-striped is-fullwidth'>
                     <thead>
                       <tr>
-                        <th></th>
+                        <th>&nbsp;</th>
                         <th></th>
                       </tr>
                     </thead>
@@ -173,7 +154,7 @@ export default class extends Component {
                 <div className='table-h-scroll'>
                   <table className='table nai-table is-striped is-fullwidth'>
                     <thead>
-                      <tr>
+                      <tr className='is-grey'>
                         <th>Date</th>
                         <th>Amount</th>
                         <th>Type</th>

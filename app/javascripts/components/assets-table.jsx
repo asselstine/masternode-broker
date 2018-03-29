@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import AssetLink from '@/components/asset-link'
 
 import SortButton from '@/components/sort-button'
 
@@ -54,7 +55,7 @@ export default () => {
     <div className='table-h-scroll'>
       <table className='table nai-table is-fullwidth is-striped'>
         <thead>
-          <tr>
+          <tr className='is-grey'>
             <th>
               <SortButton title='ID' />
             </th>
@@ -81,7 +82,7 @@ export default () => {
             return (
               <tr key={asset[0]}>
                 <td>
-                  <NavLink to='/assets/p101'>{asset[0]}</NavLink>
+                  <AssetLink to='/assets/p101'>{asset[0]}</AssetLink>
                 </td>
                 <td>
                   {asset[1]}
