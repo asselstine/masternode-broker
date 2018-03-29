@@ -69,7 +69,7 @@ export default () => {
 
   return (
     <section className='section'>
-      <div className='container is-fluid'>
+      <div className='container is-not-fluid'>
         <h1>Pools</h1>
 
         <form className='assets__filters'>

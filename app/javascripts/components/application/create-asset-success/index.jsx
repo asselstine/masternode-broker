@@ -8,7 +8,7 @@ import style from './style'
 export default () => {
   return (
     <section className='section'>
-      <div className='container is-fluid'>
+      <div className='container is-not-fluid'>
         <div className='columns is-centered'>
           <div className='column is-two-thirds-desktop is-three-fifths-widescreen is-one-half-fullhd'>
             <h1>Transaction Executed <FontAwesome name='check-circle' className='create-asset-success__icon' /></h1>

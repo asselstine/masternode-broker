@@ -27,7 +27,7 @@ export default () => {
 
   return (
     <section className='section'>
-      <div className='container is-fluid'>
+      <div className='container is-not-fluid'>
         <div className='columns'>
           <div className='column is-two-fifths'>
             <h1 className='no-margin'>

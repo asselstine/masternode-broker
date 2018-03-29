@@ -1,0 +1,82 @@
+@import '../../../colours';
+
+.navbar.is-sub {
+  background: linear-gradient(#5a5a5a, #000000);
+}
+
+.navbar.is-sub a:hover {
+  color: white;
+}
+
+.navbar.is-sub a {
+  color: $colour-grey;
+}
+
+.is-sub__logo {
+  max-width: 2rem;
+  max-height: 2rem;
+}
+
+@media screen and (max-width: 1023px) {
+  .is-sub .navbar-menu {
+    background-color: inherit;
+  }
+
+}
+
+.is-sub a.navbar-item.is-active:not(:hover),
+.is-sub a.navbar-link.is-active:not(:hover) {
+  background-color: transparent;
+}
+
+.is-sub a.navbar-item:hover,
+.is-sub a.navbar-link:hover {
+  background-color: transparent;
+}
+
+.is-sub a.navbar-item.is-active,
+.is-sub a.navbar-link.is-active {
+  background-color: transparent;
+}
+
+.is-sub .navbar-item {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.is-sub a.navbar-item {
+  position: relative;
+}
+
+.is-sub a.navbar-burger:hover {
+  color: $colour-teal;
+}
+
+@media screen and (min-width: 1024px) {
+  .is-sub a.navbar-item.is-active::after {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    height: 0;
+    width: 0;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid white;
+    border-left: 8px solid transparent;
+    content: '\a0';
+    margin-right: -8px;
+  }
+
+  .is-sub .navbar-item.has-dropdown:hover .navbar-link,
+  .is-sub .navbar-item.has-dropdown.is-active .navbar-link {
+    background-color: transparent;
+  }
+}
+
+.navbar__notifications {
+  font-size: 1.1em;
+}
+
+.navbar__notifications .fa {
+  font-size: 1.3em;
+}

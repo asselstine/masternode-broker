@@ -113,7 +113,7 @@ export default class extends Component {
 
     return (
       <section className='section'>
-        <div className='container is-fluid'>
+        <div className='container is-not-fluid'>
           <h1>
             Client Dashboard
           </h1>

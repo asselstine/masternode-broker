@@ -17,7 +17,7 @@ export default class extends Component {
   render () {
     return (
       <section className='section'>
-        <div className='container is-fluid'>
+        <div className='container is-not-fluid'>
           <div className='columns is-centered'>
             <div className='column is-two-thirds-desktop is-three-fifths-widescreen is-one-half-fullhd'>
               <h1>Confirm Create Asset</h1>
