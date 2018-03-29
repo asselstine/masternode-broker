@@ -46,11 +46,9 @@ export default withRouter(class extends Component {
           </div>
           <div className={classnames("navbar-menu", { 'is-active': this.state.isOpen})}>
             <div className='navbar-start'>
-              <NavLink className='navbar-item' to='/' exact={true} activeClassName='is-active'>Holdings</NavLink>
-              <NavLink className='navbar-item' to='/clients' activeClassName='is-active'>Clients</NavLink>
+              <NavLink className='navbar-item' to='/' exact={true} activeClassName='is-active'>Home</NavLink>
               <NavLink className='navbar-item' to='/assets' activeClassName='is-active'>Assets</NavLink>
               <NavLink className='navbar-item' to='/pools' activeClassName='is-active'>Pools</NavLink>
-              <NavLink className='navbar-item' to='/transactions' activeClassName='is-active'>Transactions</NavLink>
             </div>
             <div className='navbar-end'>
               <div className='navbar-item has-dropdown'>
