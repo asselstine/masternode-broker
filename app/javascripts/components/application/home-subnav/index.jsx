@@ -2,22 +2,12 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 export default () => {
-  /*
-  <div className='subnav'>
-    <div className='container'>
-      <div className='level'>
-        <div className='level-left'>
-          <NavLink className='subnav__item level-item' to='/assets/new'>Create Asset</NavLink>
-        </div>
-      </div>
-    </div>
-  </div>*/
   return (
     <div className='subnav-tabs tabs'>
       <div className='container'>
         <ul>
           <li>
-            <NavLink to='/' exact={true} activeClassName='is-active'>Holdings</NavLink>
+            <NavLink to='/' exact={true} activeClassName='is-active'>Total Holdings</NavLink>
           </li>
           <li><a>Market Data</a></li>
           <li><a>Network Data</a></li>

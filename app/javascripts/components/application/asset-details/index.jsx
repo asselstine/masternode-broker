@@ -140,7 +140,7 @@ export default class extends Component {
                           <span className='assets__table__label'>Balance Value</span>
                         </td>
                         <td className='assets__table__value'>
-                          $47,725 <small>($41.50/unit)</small>
+                          $51,175 <small>($41.50/unit)</small>
                         </td>
                       </tr>
                     </tbody>

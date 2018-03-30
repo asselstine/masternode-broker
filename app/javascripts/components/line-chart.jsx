@@ -5,7 +5,7 @@ import {
 
 export default (props) => {
   var lineData = {
-    labels: ["January", "February", "March", "April", "May", "June", "July"],
+    labels: ["November", "December", "January", "February", "March"],
     datasets: [
       {
         borderColor: '#26596B',
@@ -14,7 +14,7 @@ export default (props) => {
         pointBorderWidth: 2,
         pointRadius: 5,
         fill: false,
-        data: [12, 24, 40, 34, 50, 52, 70]
+        data: [25500, 32432, 46984, 48232, 51175]
       }
     ]
   };
