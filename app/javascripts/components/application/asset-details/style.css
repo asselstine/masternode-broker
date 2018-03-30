@@ -12,19 +12,14 @@
   padding-right: 0.3em;
 }
 
-.assets__table__label {
-  font-size: 0.85rem;
-  color: #777;
-}
-
 .assets__table__value {
   /* font-size: 0.875rem; */
   /* font-weight: bold; */
 }
 
 .assets__table__label {
-  top: -4px;
-  position: relative;
+  font-size: 0.85rem;
+  color: #777;
   font-weight: normal;
   color: #777777;
   text-transform: uppercase;
