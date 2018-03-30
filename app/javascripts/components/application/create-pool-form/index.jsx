@@ -4,7 +4,7 @@ import React, {
 import { Link } from 'react-router-dom'
 
 import SelectAsset from '@/components/select-asset'
-import PoolAssetsTable from '@/components/pool-assets-table'
+import PoolAssetsTableShort from '@/components/pool-assets-table-short'
 import Dropdown from '@/components/dropdown'
 
 export default class extends Component {
@@ -53,17 +53,23 @@ export default class extends Component {
 
     var actualAssets = originalAssets.slice(0, this.state.assetCount)
 
+    if (actualAssets.length) {
+      var assets =
+        <div>
+          <br />
+          <PoolAssetsTableShort assets={actualAssets} />
+        </div>
+    }
+
     return (
       <section className='section'>
         <div className='container is-not-fluid'>
           <form className='columns is-centered'>
             <div className='column is-two-thirds-desktop is-three-fifths-widescreen is-one-half-fullhd'>
 
-              <h1>Create Pool</h1>
+              <h1 className='has-text-centered'>Create Pool</h1>
 
               <div className='box'>
-                <h1 className='subtitle'>Details</h1>
-
                 <div className='field is-horizontal'>
                   <div className='field-label is-normal'>
                     <label className="label">ID</label>
@@ -151,23 +157,26 @@ export default class extends Component {
                     </div>
                   </div>
                 </div>
+              </div>
 
-                <div>
+              <div className='box'>
+
+                <div className='is-clearfix'>
                   <h1 className='subtitle is-pulled-left'>Assets</h1>
-                  <span className='is-pulled-right'>
+                  <div className='is-pulled-right'>
                     <Dropdown onClick={() => {
                      this.setState({assetCount: Math.min(originalAssets.length, this.state.assetCount + 1)})
-                    }}/>
-                  </span>
+                    }} />
+                  </div>
                 </div>
-                <PoolAssetsTable assets={actualAssets} />
-
-                <div className='has-text-centered'>
-                  <Link to='/pools/confirm' className="button is-primary">
-                    Next
-                  </Link>
-                </div>
+                {assets}
               </div>
+
+              <p className='has-text-centered'>
+                <Link to='/pools/confirm' className="button is-primary">
+                  Next
+                </Link>
+              </p>
             </div>
           </form>
         </div>

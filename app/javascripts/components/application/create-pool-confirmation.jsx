@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 import { Modal } from '@/components/modal'
 import SelectAsset from '@/components/select-asset'
-import PoolAssetsTable from '@/components/pool-assets-table'
+import PoolAssetsTableShort from '@/components/pool-assets-table-short'
 
 export default class extends Component {
   constructor (props) {
@@ -20,21 +20,15 @@ export default class extends Component {
       <section className='section'>
         <div className='container is-not-fluid'>
           <div className='columns is-centered'>
-            <div className='column is-two-thirds-desktop is-three-fifths-widescreen is-one-half-fullhd'>
-              <h1>Confirm Create Pool</h1>
+            <div className='column is-two-fifths-desktop is-two-fifths-widescreen'>
+              <h1 className='has-text-centered'>Confirm Create Pool</h1>
 
               <div className='box'>
                 <div className='table-h-scroll'>
-                  <table className='table nai-table is-striped is-fullwidth'>
-                    <thead>
-                      <tr>
-                        <th></th>
-                        <th></th>
-                      </tr>
-                    </thead>
+                  <table className='table nai-table no-border is-striped is-fullwidth'>
                     <tbody>
                       <tr>
-                        <td>
+                        <td className='assets__table__td'>
                           <span className='assets__table__label'>ID</span>
                         </td>
                         <td className='assets__table__value'>
@@ -42,7 +36,7 @@ export default class extends Component {
                         </td>
                       </tr>
                       <tr>
-                        <td>
+                        <td className='assets__table__td'>
                           <span className='assets__table__label'>Name</span>
                         </td>
                         <td className='assets__table__value'>
@@ -50,7 +44,7 @@ export default class extends Component {
                         </td>
                       </tr>
                       <tr>
-                        <td>
+                        <td className='assets__table__td'>
                           <span className='assets__table__label'>Status</span>
                         </td>
                         <td className='assets__table__value'>
@@ -58,7 +52,7 @@ export default class extends Component {
                         </td>
                       </tr>
                       <tr>
-                        <td>
+                        <td className='assets__table__td'>
                           <span className='assets__table__label'>Mode</span>
                         </td>
                         <td className='assets__table__value'>
@@ -66,7 +60,7 @@ export default class extends Component {
                         </td>
                       </tr>
                       <tr>
-                        <td>
+                        <td className='assets__table__td'>
                           <span className='assets__table__label'>Administrator</span>
                         </td>
                         <td className='assets__table__value'>
@@ -75,7 +69,7 @@ export default class extends Component {
                       </tr>
 
                       <tr>
-                        <td>
+                        <td className='assets__table__td'>
                           <span className='assets__table__label'>Value</span>
                         </td>
                         <td className='assets__table__value'>
@@ -86,11 +80,13 @@ export default class extends Component {
                   </table>
                 </div>
 
-                <PoolAssetsTable />
+                <PoolAssetsTableShort />
 
-                <div className="notification is-warning">
-                  <div className='has-text-centered'>You will need to enter your 2FA code to complete the transaction</div>
-                </div>
+              </div>
+              <div className='box is-primary'>
+                <h2 className='is-confirm-header'>
+                  Authorize Transaction
+                </h2>
 
                 <form>
                   <div className='field is-horizontal'>
@@ -107,7 +103,7 @@ export default class extends Component {
                   </div>
                   <div className='field is-horizontal'>
                     <div className='field-label is-normal is-flex-grow-2'>
-                      <label className='label'>2-Factor Code</label>
+                      <label className='label'>2FA Code</label>
                     </div>
                     <div className='field-body'>
                       <div className='field'>
@@ -122,6 +118,10 @@ export default class extends Component {
                     <Link to='/pools/pna456/success' className='button is-primary'>Execute</Link>
                   </div>
                 </form>
+              </div>
+
+              <div className='has-text-centered'>
+                <Link to='/pools/new' className='button'>Back</Link>
               </div>
             </div>
           </div>

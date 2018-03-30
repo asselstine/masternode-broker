@@ -22,8 +22,8 @@ export default class extends Component {
           </div>
           <div className='field-body'>
             <p className='help'>
-              <small>Available: 474</small> <br />
-              <small>Required: 1000</small>
+              <small className='tag is-light'>Available:&nbsp; <b>474</b></small>&nbsp;
+              <small className='tag is-dark'>Required:&nbsp; <b>1000</b></small>
             </p>
           </div>
         </div>
@@ -37,7 +37,7 @@ export default class extends Component {
             <form className='columns is-centered'>
               <div className='column is-two-thirds-desktop is-three-fifths-widescreen is-one-half-fullhd'>
 
-                <h1>Create Asset</h1>
+                <h1 className='has-text-centered'>Create Asset</h1>
 
                 <div className='box'>
 
@@ -80,6 +80,8 @@ export default class extends Component {
                   </div>
 
                   {availability}
+                </div>
+                <div className='box'>
 
                   <div className='field is-horizontal'>
                     <div className='field-label'>
@@ -164,25 +166,17 @@ export default class extends Component {
                       </div>
                     </div>
                   </div>
-
-                  <div className="field is-horizontal">
-                    <div className="field-label">
-                    </div>
-                    <div className="field-body">
-                      <div className="field">
-                        <div className="control">
-                          <Link to='/assets/confirm' className="button is-primary">
-                            Next
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
                 </div>
+                
+                <p className='has-text-centered'>
+                  <Link to='/assets/confirm' className="button is-primary">
+                    Next
+                  </Link>
+                </p>
               </div>
             </form>
           </div>
+
         </section>
       </div>
     )

@@ -13,7 +13,7 @@
   padding: 0.5rem 0.75rem;
 }
 
-.nai-table.table tbody tr:first-child {
+.nai-table.table:not(.no-border) tbody tr:first-child {
   margin-top: 1px;
   border-top: 1px solid black;
 }

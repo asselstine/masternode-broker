@@ -30,3 +30,7 @@
   color: #777;
   padding-left: 1em;
 }
+
+.assets__table__td {
+  text-align: right;
+}
