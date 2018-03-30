@@ -6,7 +6,6 @@ import AssetLink from '@/components/asset-link'
 import SortButton from '@/components/sort-button'
 import HField from '@/components/bulma/h-field'
 import style from './style'
-import PoolSubnav from '../pool-subnav'
 
 function oneOf(array) {
   return array[parseInt(Math.random() * array.length)]
@@ -70,122 +69,117 @@ export default () => {
   ]
 
   return (
-    <div>
-      <section className='section'>
-        <div className='container is-not-fluid'>
-          <h1 className='is-relative'>
-            Pools
-            <NavLink to='/pools/new' className='button is-primary is-rounded is-tiny has-text-weight-bold is-header'>
-              <FontAwesome name='plus' />&nbsp;New
-            </NavLink>
-          </h1>
+    <section className='section'>
+      <div className='container is-not-fluid'>
+        <h1>
+          Pools
+        </h1>
 
-          <form className='assets__filters'>
-            <div className='level'>
-              <div className='level-left'>
-                <div className='level-item'>
-                  <div className='field is-flex-1'>
-                    <div className="control has-icons-right is-expanded">
-                      <input className="input" type="search" placeholder="ID" />
-                      <span className="icon is-small is-right">
-                        <FontAwesome name='search' />
-                      </span>
-                    </div>
+        <form className='assets__filters'>
+          <div className='level'>
+            <div className='level-left'>
+              <div className='level-item'>
+                <div className='field is-flex-1'>
+                  <div className="control has-icons-right is-expanded">
+                    <input className="input" type="search" placeholder="ID" />
+                    <span className="icon is-small is-right">
+                      <FontAwesome name='search' />
+                    </span>
                   </div>
-                </div>
-                <div className='level-item'>
-                  <div className='select is-fullwidth'>
-                    <select>
-                      <option>Any status</option>
-                      <option>Online</option>
-                      <option>Offline</option>
-                      <option>Pending</option>
-                    </select>
-                  </div>
-                </div>
-                <div className='level-item'>
-                  <div className='select is-fullwidth'>
-                    <select>
-                      <option>Any Assignment</option>
-                      <option>Unassigned</option>
-                      <option>Assigned</option>
-                    </select>
-                  </div>
-                </div>
-                <div className='level-item'>
-                  <div className='select is-fullwidth'>
-                    <select>
-                      <option>Any mode</option>
-                      <option>Default</option>
-                      <option>Accumulation</option>
-                      <option>Cashflow</option>
-                      <option>Trading:arbitrage</option>
-                      <option>Trading:ai</option>
-                    </select>
-                  </div>
-                </div>
-                <div className='level-item'>
-                  <a className='button is-primary'>Filter</a>
                 </div>
               </div>
+              <div className='level-item'>
+                <div className='select is-fullwidth'>
+                  <select>
+                    <option>Any status</option>
+                    <option>Online</option>
+                    <option>Offline</option>
+                    <option>Pending</option>
+                  </select>
+                </div>
+              </div>
+              <div className='level-item'>
+                <div className='select is-fullwidth'>
+                  <select>
+                    <option>Any Assignment</option>
+                    <option>Unassigned</option>
+                    <option>Assigned</option>
+                  </select>
+                </div>
+              </div>
+              <div className='level-item'>
+                <div className='select is-fullwidth'>
+                  <select>
+                    <option>Any mode</option>
+                    <option>Default</option>
+                    <option>Accumulation</option>
+                    <option>Cashflow</option>
+                    <option>Trading:arbitrage</option>
+                    <option>Trading:ai</option>
+                  </select>
+                </div>
+              </div>
+              <div className='level-item'>
+                <a className='button is-primary'>Filter</a>
+              </div>
             </div>
-          </form>
-
-          <div className='table-h-scroll'>
-            <table className='table nai-table is-fullwidth is-striped'>
-              <thead>
-                <tr className='is-grey'>
-                  <th>
-                    <SortButton title='ID' />
-                  </th>
-                  <th>
-                    <SortButton title='Name' />
-                  </th>
-                  <th>
-                    <SortButton title='Status' />
-                  </th>
-                  <th>
-                    <SortButton title='Mode' />
-                  </th>
-                  <th>
-                    <SortButton title='Administrator' />
-                  </th>
-                  <th>
-                    <SortButton title='Value'/>
-                  </th>
-                </tr>
-              </thead>
-
-              <tbody>
-                {assets.map((asset) => {
-                  return (
-                    <tr key={asset[0]}>
-                      <td>
-                        <AssetLink to='/pools/P101'>{asset[0]}</AssetLink>
-                      </td>
-                      <td>
-                        {asset[1]}
-                      </td>
-                      <td>
-                        {asset[2]}
-                      </td>
-                      <td>
-                        {asset[3]}
-                      </td>
-                      <td>
-                        {asset[4]}
-                      </td>
-                      <td>
-                        {asset[5]}
-                      </td>
-                    </tr>
-                  )
-                })}
-              </tbody>
-            </table>
           </div>
+        </form>
+
+        <div className='table-h-scroll'>
+          <table className='table nai-table is-fullwidth is-striped'>
+            <thead>
+              <tr className='is-grey'>
+                <th>
+                  <SortButton title='ID' />
+                </th>
+                <th>
+                  <SortButton title='Name' />
+                </th>
+                <th>
+                  <SortButton title='Status' />
+                </th>
+                <th>
+                  <SortButton title='Mode' />
+                </th>
+                <th>
+                  <SortButton title='Administrator' />
+                </th>
+                <th>
+                  <SortButton title='Value'/>
+                </th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {assets.map((asset) => {
+                return (
+                  <tr key={asset[0]}>
+                    <td>
+                      <AssetLink to='/pools/P101'>{asset[0]}</AssetLink>
+                    </td>
+                    <td>
+                      {asset[1]}
+                    </td>
+                    <td>
+                      {asset[2]}
+                    </td>
+                    <td>
+                      {asset[3]}
+                    </td>
+                    <td>
+                      {asset[4]}
+                    </td>
+                    <td>
+                      {asset[5]}
+                    </td>
+                  </tr>
+                )
+              })}
+            </tbody>
+          </table>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   )
 }

@@ -27,7 +27,6 @@ export default () => {
       <section className='section'>
         <div className='container is-not-fluid'>
           <h1>Assets</h1>
-
           <form className='assets__filters'>
             <div className='level'>
               <div className='level-left'>

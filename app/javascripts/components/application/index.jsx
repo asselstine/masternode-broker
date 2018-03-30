@@ -29,6 +29,7 @@ import Home from './home'
 import GeneralNavcol from './general-navcol'
 import GeneralNavbar from './general-navbar'
 import Alerts from './alerts'
+import PoolPage from './pool-page'
 
 export const Application = () => {
   return (
@@ -38,19 +39,29 @@ export const Application = () => {
         <div className='app-container__content'>
           <Switch>
             <Route path='/pools/pna456/success'>
-              <CreatePoolSuccess />
+              <PoolPage>
+                <CreatePoolSuccess />
+              </PoolPage>
             </Route>
             <Route path='/pools/P101'>
-              <PoolDetails />
+              <PoolPage>
+                <PoolDetails />
+              </PoolPage>
             </Route>
             <Route path='/pools/new'>
-              <CreatePoolForm />
+              <PoolPage>
+                <CreatePoolForm />
+              </PoolPage>
             </Route>
             <Route path='/pools/confirm'>
-              <CreatePoolConfirmation />
+              <PoolPage>
+                <CreatePoolConfirmation />
+              </PoolPage>
             </Route>
             <Route path='/pools'>
-              <Pools />
+              <PoolPage>
+                <Pools />
+              </PoolPage>
             </Route>
             <Route path='/assets/new'>
               <CreateAssetForm />

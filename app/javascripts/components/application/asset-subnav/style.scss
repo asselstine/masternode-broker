@@ -12,3 +12,27 @@
 .subnav__item + .subnav__item {
   margin-left: 1em;
 }
+
+.tabs.subnav-tabs {
+  border-bottom-color: #dbdbdb;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  margin-bottom: 0 !important;
+}
+
+.tabs.subnav-tabs ul {
+  border: none;
+  position: relative;
+  bottom: -1px;
+  z-index: 1;
+}
+
+.tabs.subnav-tabs li a.is-active {
+  border-bottom-color: #43A2A1;
+  color: #43A2A1;
+}
+
+.tabs.subnav-tabs li a {
+  border-bottom: 4px solid transparent;
+  color: #43A2A1;
+}

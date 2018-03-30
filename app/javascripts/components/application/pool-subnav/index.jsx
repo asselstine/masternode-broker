@@ -3,13 +3,16 @@ import { NavLink } from 'react-router-dom'
 
 export default () => {
   return (
-    <div className='subnav'>
+    <div className='subnav-tabs tabs'>
       <div className='container'>
-        <div className='level'>
-          <div className='level-left'>
-            <NavLink className='subnav__item level-item' to='/pools/new'>Create Pool</NavLink>
-          </div>
-        </div>
+        <ul>
+          <li>
+            <NavLink to='/pools' exact={true} activeClassName='is-active'>Manage</NavLink>
+          </li>
+          <li>
+            <NavLink to='/pools/new' activeClassName='is-active'>Create</NavLink>
+          </li>
+        </ul>
       </div>
     </div>
   )
