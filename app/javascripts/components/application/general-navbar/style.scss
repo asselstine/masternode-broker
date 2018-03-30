@@ -4,7 +4,7 @@
   background: linear-gradient(#5a5a5a, #000000);
 }
 
-.navbar.is-general a:hover {
+.navbar.is-general a:hover:not(.is-active) {
   color: white;
 }
 
